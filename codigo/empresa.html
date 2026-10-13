@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../imagens/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa | Monta-Tec Engenharia</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 relative pt-16 md:pt-20">
+
+    <!-- CABEÇALHO / MENU COMPACTO UNIFICADO -->
+    <header id="main-header" class="bg-gradient-to-b from-white/90 via-white/50 to-transparent fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-3.5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../imagens/logo.png" alt="Monta-Tec Engenharia" class="h-12 md:h-16 w-auto">
+            </a>
+            
+            <nav id="desktop-nav" class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-800 transition-colors duration-300">
+                <a href="index.html" class="hover:text-blue-600 transition">INÍCIO</a>
+                <a href="servicos.html" class="hover:text-blue-600 transition">SERVIÇOS</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition">PORTFÓLIO</a>
+                <a href="empresa.html" class="text-blue-600 transition">EMPRESA</a>
+                <a href="contato.html" class="hover:text-blue-600 transition">CONTATO</a>
+            </nav>
+
+            <button id="menu-btn" class="lg:hidden text-gray-800 focus:outline-none p-2 transition-colors duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER INTERNO HERO (Com Marca d'água do Logo) -->
+    <section class="relative min-h-[50vh] flex items-center justify-center text-center px-4 md:px-8 bg-slate-950 text-white pt-36 pb-20 overflow-hidden" style="background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1541888086925-0c770f4e7d1b?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        
+        <!-- LOGO MARCA D'ÁGUA NO FUNDO -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <!-- A classe grayscale invert transforma o logo em branco, e opacity-[0.08] deixa ele super suave no fundo -->
+            <img src="../imagens/logo.png" alt="Marca d'água Monta-Tec" class="w-[120%] md:w-[70%] lg:w-[45%] object-contain opacity-[0.08] grayscale invert blur-[1px] transform -translate-y-4">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto space-y-4 text-center fade-in">
+            <span class="text-xs font-bold text-blue-500 uppercase tracking-widest block mx-auto">Nossa História</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mx-auto">
+                Quem Somos
+            </h1>
+            <p class="text-gray-300 font-light text-sm md:text-base max-w-2xl mx-auto pt-2">Conheça os pilares éticos e operacionais que sustentam nossa engenharia há quase uma década.</p>
+            <div class="w-12 h-0.5 bg-blue-500 mx-auto mt-4"></div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS: TEXTO PRINCIPAL -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Coluna de Texto -->
+                <div>
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest block mb-2">Fundada em 2016</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 tracking-tight">Especialistas na execução de projetos arquitetônicos premium.</h2>
+                    
+                    <div class="space-y-4 text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                        <p>
+                            Fundada em Agosto de 2016, a Monta-Tec Engenharia nasceu com a visão de ser uma empresa parceira e exclusiva dos principais fabricantes de produtos arquitetônicos do país. 
+                        </p>
+                        <p>
+                            Não encaramos acabamentos complexos de forma genérica: aplicamos engenharia de ponta desde a leitura estrutural do projeto até a entrega final no canteiro. Nosso foco é a comercialização e instalação, possuindo canal direto com indústrias de ponta no segmento de brises, revestimentos (ACM), forros, esquadrias e policarbonatos.
+                        </p>
+                        <p>
+                            Nossa meta é prestar serviços com o mais alto padrão de qualidade, oferecendo assessoria completa para que nossos clientes — construtoras e gerenciadoras — não precisem se preocupar com gargalos técnicos fora do seu foco principal de atuação.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Coluna de Habilidades / Dashboard -->
+                <div class="bg-gray-50 p-8 border border-gray-100 rounded-sm shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">Excelência Operacional</h3>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Stat 1 -->
+                        <div class="bg-white p-6 rounded-sm border border-gray-100 text-center shadow-sm flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
+                            <svg class="w-10 h-10 text-blue-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div class="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-700">Alta Qualidade</div>
+                        </div>
+                        
+                        <!-- Stat 2 -->
+                        <div class="bg-white p-6 rounded-sm border border-gray-100 text-center shadow-sm flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
+                            <svg class="w-10 h-10 text-blue-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <div class="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-700">Agilidade</div>
+                        </div>
+                        
+                        <!-- Stat 3 -->
+                        <div class="bg-white p-6 rounded-sm border border-gray-100 text-center shadow-sm flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
+                            <svg class="w-10 h-10 text-gray-800 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div class="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-700">Melhor Preço</div>
+                        </div>
+                        
+                        <!-- Stat 4 -->
+                        <div class="bg-white p-6 rounded-sm border border-gray-100 text-center shadow-sm flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
+                            <svg class="w-10 h-10 text-green-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div class="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-700">Satisfação</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILARES DE ATUAÇÃO COM ILUSTRAÇÕES -->
+    <section class="py-16 bg-gray-50 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Fundamentos</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Nossos Pilares</h2>
+                <div class="w-12 h-0.5 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pilar 1 -->
+                <div class="bg-white p-6 md:p-8 border border-gray-100 shadow-sm rounded-sm hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center rounded-sm mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-sm uppercase">Profissionalismo</h4>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Corpo técnico de engenharia altamente qualificado. Somos a melhor alternativa para quem precisa de soluções rápidas com excelente custo-benefício.
+                    </p>
+                </div>
+                
+                <!-- Pilar 2 -->
+                <div class="bg-white p-6 md:p-8 border border-gray-100 shadow-sm rounded-sm hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center rounded-sm mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-sm uppercase">Compromisso</h4>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Rigor no cumprimento de prazos contratuais, mantendo sempre uma comunicação clara e objetiva em todas as etapas dos serviços.
+                    </p>
+                </div>
+                
+                <!-- Pilar 3 -->
+                <div class="bg-white p-6 md:p-8 border border-gray-100 shadow-sm rounded-sm hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center rounded-sm mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>    
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-sm uppercase">Objetivos</h4>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Nossa missão é trazer total satisfação a nossos clientes, fornecedores e colaboradores, oferecendo alta qualidade em serviços e inovações.
+                    </p>
+                </div>
+                
+                <!-- Pilar 4 -->
+                <div class="bg-white p-6 md:p-8 border border-gray-100 shadow-sm rounded-sm hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center rounded-sm mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2 text-sm uppercase">Atendimento</h4>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Suporte sob medida adaptado à sua obra. Oferecemos comunicação clara, com ética, respeito e máxima atenção aos detalhes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO CENTRAL: COMPROMISSOS -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="bg-gray-900 text-white p-10 md:p-16 rounded-sm shadow-xl text-center border-b-4 border-blue-600">
+                <h3 class="text-2xl font-bold tracking-wider uppercase text-blue-500 mb-10">Compromissos</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="border-t border-gray-800 pt-6">
+                        <h5 class="font-bold text-lg mb-2">Qualidade em 1º Lugar</h5>
+                        <p class="text-gray-400 text-xs">Materiais certificados e vistorias rigorosas.</p>
+                    </div>
+                    <div class="border-t border-gray-800 pt-6">
+                        <h5 class="font-bold text-lg mb-2">Atendimento Personalizado</h5>
+                        <p class="text-gray-400 text-xs">Adequação técnica dedicada para cada cliente.</p>
+                    </div>
+                    <div class="border-t border-gray-800 pt-6">
+                        <h5 class="font-bold text-lg mb-2">Melhor Custo x Benefício</h5>
+                        <p class="text-gray-400 text-xs">Parcerias diretas com os maiores fabricantes.</p>
+                    </div>
+                    <div class="border-t border-gray-800 pt-6">
+                        <h5 class="font-bold text-lg mb-2">Satisfação Garantida</h5>
+                        <p class="text-gray-400 text-xs">Estética superior alinhada à durabilidade extrema.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12">
+                    <a href="contato.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-8 py-4 uppercase tracking-wider transition rounded-sm">
+                        Falar Conosco →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-xs md:text-sm text-center md:text-left border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+                <img src="../imagens/logo fundo branco.png" alt="logo fundo branco" class="h-10 w-auto mx-auto md:mx-0 mb-3">
+                <p class="leading-relaxed">Especialistas em montagens técnicas de alto padrão.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Contato</h4>
+                <div class="space-y-1 text-xs">
+                    <p class="text-gray-300">(11) 94747–7099 — Eng. Fernando</p>
+                    <p class="text-gray-300">(11) 99344–7599 — Paulo Cézar</p>
+                    <p class="text-gray-300">pc@montateceng.com.br</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Sede Administrativa</h4>
+                <p class="leading-relaxed text-gray-300 text-xs">Av. Brigadeiro Faria Lima, 1616 / 1⁰ andar sala 105/106 - Jardim Paulistano, São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-[10px] border-t border-gray-800 pt-4 text-gray-500">
+            &copy; 2026 Monta-Tec Engenharia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- MENU MOBILE LATERAL (DRAWER) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-gray-950/40 backdrop-blur-sm transition-opacity duration-300">
+        <div id="mobile-menu-panel" class="bg-white w-4/5 max-w-sm h-full ml-auto p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
+                    <img src="../imagens/logo.png" alt="Monta-Tec" class="h-10 w-auto">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 focus:outline-none p-2 rounded-sm hover:bg-gray-50 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="flex flex-col space-y-2 text-base font-semibold text-gray-700 mt-4">
+                    <a href="index.html" class="mobile-link hover:text-blue-600 transition py-2.5 px-3 rounded-sm block">INÍCIO</a>
+                    <a href="servicos.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">SERVIÇOS</a>
+                    <a href="portfolio.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">PORTFÓLIO</a>
+                    <a href="empresa.html" class="mobile-link text-blue-600 bg-blue-50/50 transition py-2.5 px-3 rounded-sm block">EMPRESA</a>
+                    <a href="contato.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">CONTATO</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS DO MENU -->
+    <script>
+        const header = document.getElementById('main-header');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Header Inteligente
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) {
+                header.classList.remove('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+                header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.add('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+            }
+        });
+
+        // Funções do Menu Mobile
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => { mobileMenuPanel.classList.remove('translate-x-full'); }, 10);
+        }
+        function closeMenu() {
+            mobileMenuPanel.classList.add('translate-x-full');
+            setTimeout(() => { mobileMenu.classList.add('hidden'); }, 300);
+        }
+        menuBtn.addEventListener('click', (e) => { e.stopPropagation(); openMenu(); });
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => { if (!mobileMenuPanel.contains(e.target)) { closeMenu(); } });
+        mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+    </script>
+</body>
+</html>

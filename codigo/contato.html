@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Monta-Tec Engenharia</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../imagens/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 relative pt-16 md:pt-20">
+
+    <!-- CABEÇALHO / MENU COMPACTO UNIFICADO -->
+    <header id="main-header" class="bg-gradient-to-b from-white/90 via-white/50 to-transparent fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-3.5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../imagens/logo.png" alt="Monta-Tec Engenharia" class="h-12 md:h-16 w-auto">
+            </a>
+            
+            <nav id="desktop-nav" class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-800 transition-colors duration-300">
+                <a href="index.html" class="hover:text-blue-600 transition">INÍCIO</a>
+                <a href="servicos.html" class="hover:text-blue-600 transition">SERVIÇOS</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition">PORTFÓLIO</a>
+                <a href="empresa.html" class="hover:text-blue-600 transition">EMPRESA</a>
+                <a href="contato.html" class="text-blue-600 transition">CONTATO</a>
+            </nav>
+
+            <button id="menu-btn" class="lg:hidden text-gray-800 focus:outline-none p-2 transition-colors duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER HERO (Capa Interna) -->
+    <section class="relative min-h-[50vh] flex items-center justify-center text-center px-4 md:px-8 bg-slate-950 text-white pt-36 pb-20" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        <div class="max-w-5xl mx-auto space-y-4 text-center fade-in">
+            <span class="text-xs font-bold text-blue-500 uppercase tracking-widest block mx-auto">Atendimento Especializado</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mx-auto">
+                Fale com a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200 font-light">Monta-Tec</span>
+            </h1>
+            <p class="text-gray-300 font-light text-sm md:text-base max-w-2xl mx-auto pt-2">Solicite orçamentos, envie escopos de obras ou tire dúvidas técnicas com nossos especialistas.</p>
+            <div class="w-12 h-0.5 bg-blue-500 mx-auto mt-4"></div>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- COLUNA ESQUERDA: CONTATO & FORMULÁRIO -->
+            <div class="lg:col-span-7 space-y-8 fade-in">
+                
+                <!-- Bloco de Contatos Rápidos -->
+                <div class="bg-white p-6 md:p-8 border border-gray-200 shadow-sm rounded-sm flex flex-col sm:flex-row gap-8 justify-between">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full block"></span> Central de Atendimento
+                        </h3>
+                        <div>
+                            <span class="block font-bold text-gray-400 uppercase text-xs tracking-wider mb-1">Telefone Fixo</span>
+                            <p class="text-sm font-semibold text-gray-800">(11) 2538-9577</p>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-gray-400 uppercase text-xs tracking-wider mb-1">E-mail</span>
+                            <p class="text-sm font-semibold text-gray-800">pc@montateceng.com.br</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full block"></span> WhatsApp Direto
+                        </h3>
+                        <div>
+                            <span class="block font-bold text-gray-400 uppercase text-xs tracking-wider mb-1">Engenharia</span>
+                            <a href="https://wa.me/5511947477099" target="_blank" class="text-sm font-semibold text-gray-800 hover:text-green-600 transition block">
+                                (11) 94747–7099 — Eng. Fernando
+                            </a>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-gray-400 uppercase text-xs tracking-wider mb-1">Comercial</span>
+                            <a href="https://wa.me/5511993447599" target="_blank" class="text-sm font-semibold text-gray-800 hover:text-green-600 transition block">
+                                (11) 99344–7599 — Paulo Cézar
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Orçamento -->
+                <form class="space-y-5 bg-white p-6 md:p-8 rounded-sm border border-gray-200 shadow-sm">
+                    <div class="mb-6 border-b border-gray-100 pb-4">
+                        <h4 class="font-bold text-gray-900 text-xl tracking-tight mb-1">Envie seu projeto</h4>
+                        <p class="text-xs text-gray-500 font-light">Preencha os dados abaixo e retornaremos o mais breve possível.</p>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Nome Completo / Empresa</label>
+                        <input type="text" placeholder="Ex: Engenharia ABC Ltda" class="w-full p-3.5 text-sm bg-gray-50 border border-gray-200 rounded-sm focus:bg-white focus:outline-none focus:border-blue-600 transition-colors">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">E-mail de Contato</label>
+                            <input type="email" placeholder="nome@email.com" class="w-full p-3.5 text-sm bg-gray-50 border border-gray-200 rounded-sm focus:bg-white focus:outline-none focus:border-blue-600 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Telefone / Celular</label>
+                            <input type="tel" placeholder="(11) 99999-0000" class="w-full p-3.5 text-sm bg-gray-50 border border-gray-200 rounded-sm focus:bg-white focus:outline-none focus:border-blue-600 transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Assunto da Mensagem</label>
+                        <input type="text" placeholder="Ex: Orçamento de Brises Metálicos / Forros" class="w-full p-3.5 text-sm bg-gray-50 border border-gray-200 rounded-sm focus:bg-white focus:outline-none focus:border-blue-600 transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Detalhes do Projeto</label>
+                        <textarea placeholder="Descreva os produtos, metragens ou especificações da sua obra..." rows="5" class="w-full p-3.5 text-sm bg-gray-50 border border-gray-200 rounded-sm focus:bg-white focus:outline-none focus:border-blue-600 transition-colors resize-y"></textarea>
+                    </div>
+
+                    <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-4 transition uppercase tracking-widest rounded-sm shadow-md mt-2">
+                        Enviar Solicitação
+                    </button>
+                </form>
+            </div>
+
+            <!-- COLUNA DIREITA: ENDEREÇO & MAPA -->
+            <div class="lg:col-span-5 space-y-6 fade-in" style="animation-delay: 0.1s;">
+                <div class="bg-white p-6 md:p-8 border border-gray-200 shadow-sm rounded-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-gray-50 border border-gray-100 text-blue-600 p-3 rounded-sm flex-shrink-0">
+                            <!-- Ícone clássico de Localização (Pin do Mapa) -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base mb-1 tracking-tight">Endereço Comercial</h4>
+                            <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                Av. Brigadeiro Faria Lima, 1616<br>
+                                1⁰ andar sala 105/106<br>
+                                Jardim Paulistano, São Paulo - SP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="w-full h-80 lg:h-[480px] rounded-sm shadow-sm overflow-hidden border border-gray-200 bg-gray-100">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.146200234718!2d-46.6908311!3d-23.5721306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce570a27f6cfb3%3A0x6bda190989f55e0a!2sAv.%20Brigadeiro%20Faria%20Lima%2C%201616%20-%20Jardim%20Paulistano%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-xs md:text-sm text-center md:text-left border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+                <img src="../imagens/logo fundo branco.png" alt="logo fundo branco" class="h-10 w-auto mx-auto md:mx-0 mb-3">
+                <p class="leading-relaxed">Especialistas em montagens técnicas de alto padrão.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Contato</h4>
+                <div class="space-y-2 flex flex-col items-center md:items-start text-sm">
+                    <p class="text-gray-300">(11) 94747–7099 — Eng. Fernando</p>
+                    <p class="text-gray-300">(11) 99344–7599 — Paulo Cézar</p>
+                    <p class="text-gray-300">pc@montateceng.com.br</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Endereço Comercial</h4>
+                <p class="leading-relaxed text-gray-300 text-xs">Av. Brigadeiro Faria Lima, 1616 / 1⁰ andar sala 105/106 - Jardim Paulistano, São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-[10px] border-t border-gray-800 pt-4 text-gray-500">
+            &copy; 2026 Monta-Tec Engenharia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- MENU MOBILE LATERAL (DRAWER) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-gray-950/40 backdrop-blur-sm transition-opacity duration-300">
+        <div id="mobile-menu-panel" class="bg-white w-4/5 max-w-sm h-full ml-auto p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
+                    <img src="../imagens/logo.png" alt="Monta-Tec" class="h-10 w-auto">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 focus:outline-none p-2 rounded-sm hover:bg-gray-50 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="flex flex-col space-y-2 text-base font-semibold text-gray-700 mt-4">
+                    <a href="index.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">INÍCIO</a>
+                    <a href="servicos.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">SERVIÇOS</a>
+                    <a href="portfolio.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">PORTFÓLIO</a>
+                    <a href="empresa.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">EMPRESA</a>
+                    <a href="contato.html" class="mobile-link text-blue-600 bg-blue-50/50 transition py-2.5 px-3 rounded-sm block">CONTATO</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const header = document.getElementById('main-header');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Header Inteligente com fundo translúcido ao descer
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) {
+                header.classList.remove('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+                header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.add('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+            }
+        });
+
+        // Funções do Menu Drawer Mobile
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => { mobileMenuPanel.classList.remove('translate-x-full'); }, 10);
+        }
+        function closeMenu() {
+            mobileMenuPanel.classList.add('translate-x-full');
+            setTimeout(() => { mobileMenu.classList.add('hidden'); }, 300);
+        }
+        menuBtn.addEventListener('click', (e) => { e.stopPropagation(); openMenu(); });
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => { if (!mobileMenuPanel.contains(e.target)) { closeMenu(); } });
+        mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Monta-Tec Engenharia</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../imagens/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Esconde a barra de rolagem horizontal do carrossel */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 relative pt-16 md:pt-20 flex flex-col min-h-screen">
+
+    <!-- CABEÇALHO / MENU COMPACTO UNIFICADO -->
+    <header id="main-header" class="bg-gradient-to-b from-white/90 via-white/50 to-transparent fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-3.5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../imagens/logo.png" alt="Monta-Tec Engenharia" class="h-12 md:h-16 w-auto">
+            </a>
+            
+            <nav id="desktop-nav" class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-800 transition-colors duration-300">
+                <a href="index.html" class="hover:text-blue-600 transition">INÍCIO</a>
+                <a href="servicos.html" class="hover:text-blue-600 transition">SERVIÇOS</a>
+                <a href="portfolio.html" class="text-blue-600 transition">PORTFÓLIO</a>
+                <a href="empresa.html" class="hover:text-blue-600 transition">EMPRESA</a>
+                <a href="contato.html" class="hover:text-blue-600 transition">CONTATO</a>
+            </nav>
+
+            <button id="menu-btn" class="lg:hidden text-gray-800 focus:outline-none p-2 transition-colors duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER INTERNO HERO -->
+    <section class="relative min-h-[40vh] flex items-center justify-center text-center px-4 md:px-8 bg-slate-950 text-white pt-28 pb-12" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        <div class="max-w-5xl mx-auto space-y-3 text-center fade-in">
+            <span class="text-[11px] font-bold text-blue-500 uppercase tracking-widest block mx-auto">Obras Entregues</span>
+            <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight text-white mx-auto">
+                Nosso Portfólio de Projetos
+            </h1>
+            <p class="text-gray-300 font-light text-xs md:text-sm max-w-xl mx-auto pt-1">Conheça algumas das execuções de destaque onde a metodologia Monta-Tec garantiu excelência estética e estrutural.</p>
+            <div class="w-10 h-0.5 bg-blue-500 mx-auto mt-3"></div>
+        </div>
+    </section>
+
+    <!-- WRAPPER: CONTEÚDO DO PORTFÓLIO -->
+    <div class="relative w-full flex-grow">
+
+        <!-- MENU STICKY DE ABAS -->
+        <div id="sticky-menu" class="sticky top-[76px] md:top-[92px] z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm py-4 transition-all duration-300">
+            <div class="max-w-5xl mx-auto px-4 flex justify-center">
+                <div class="inline-flex bg-gray-100 p-1.5 rounded-full border border-gray-200 shadow-inner overflow-x-auto no-scrollbar" id="tabs-nav">
+                    <button class="tab-btn px-6 py-2.5 text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-full bg-white text-blue-600 shadow-sm transition-all flex-shrink-0" data-target="projetos-detalhados">Projetos Detalhados</button>
+                    <button class="tab-btn px-6 py-2.5 text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-full text-gray-500 hover:text-gray-900 transition-all flex-shrink-0" data-target="galeria-fotos">Galeria de Fotos</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÁREA DE CONTEÚDO -->
+        <section class="py-8 md:py-16 max-w-7xl mx-auto px-4 md:px-6 min-h-[400px]" id="tabs-content">
+            
+            <!-- ABA 1: PROJETOS DETALHADOS -->
+            <div id="projetos-detalhados" class="tab-pane fade-in">
+                <div class="space-y-16 md:space-y-24">
+                    
+                    <!-- PROJETO 1: METRÔ LINHA 17 (IMAGEM ESQUERDA) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 border-b border-gray-100 pb-16">
+                        <!-- Imagem Panorâmica -->
+                        <div class="lg:col-span-8 w-full aspect-[2/1] rounded-sm overflow-hidden relative group bg-gray-100 shadow-sm order-1">
+                            <button onclick="this.nextElementSibling.scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <div class="carousel-container flex gap-0 overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full">
+                                <img src="../imagens/Portifolho/obras/met/met (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 1">
+                                <img src="../imagens/Portifolho/obras/met/met (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 2">
+                                <img src="../imagens/Portifolho/obras/met/met (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 3">
+                                <img src="../imagens/Portifolho/obras/met/met (3.5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 3">
+                                <img src="../imagens/Portifolho/obras/met/met (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 4">
+                                <img src="../imagens/Portifolho/obras/met/met (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 5">
+                                <img src="../imagens/Portifolho/obras/met/met (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 6">  
+                                <img src="../imagens/Portifolho/obras/met/met (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 7">
+                                <img src="../imagens/Portifolho/obras/met/met (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 8">
+                                <img src="../imagens/Portifolho/obras/met/met (9).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 9">
+                                <img src="../imagens/Portifolho/obras/met/met (10).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 10">
+                                <img src="../imagens/Portifolho/obras/met/met (11).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 11">
+                                <img src="../imagens/Portifolho/obras/met/met (12).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 12">
+                            </div>
+                            <button onclick="this.previousElementSibling.scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-sm md:hidden pointer-events-none z-10">Deslize &rarr;</div>
+                        </div>
+                        
+                        <div class="lg:col-span-4 flex flex-col justify-center space-y-4 order-2">
+                            <div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Infraestrutura e Mobilidade</span>
+                                <h3 class="text-2xl font-bold text-gray-900 leading-snug">Monotrilho Linha 17-Ouro</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                Realizamos a execução e montagem de <strong>revestimentos metálicos em aço galvanizado</strong>, incluindo a instalação de <strong>telas galvanizadas nas áreas externas e internas</strong> da estrutura.
+                                <br><br>
+                                A atenção aos detalhes de acabamento garantiu uniformidade e qualidade em uma <strong>obra de alta complexidade</strong>. A utilização do aço galvanizado contribui para a <strong>durabilidade, proteção e acabamento</strong> dos revestimentos, adequando-se às condições de uma infraestrutura elevada e exposta às intempéries.
+                            </p>
+                            <div class="flex flex-col gap-2 pt-2 border-t border-gray-100">
+                                <span class="text-xs font-semibold text-gray-800 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Revestimentos Metálicos
+                                </span>
+                                <span class="text-xs font-semibold text-blue-700 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> Aço Galvanizado
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 2: SHOPPING MORUMBI (IMAGEM DIREITA) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 border-b border-gray-100 pb-16">
+                        <div class="lg:col-span-4 flex flex-col justify-center space-y-4 order-2 lg:order-1">
+                            <div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Comercial de Alto Padrão</span>
+                                <h3 class="text-2xl font-bold text-gray-900 leading-snug">MorumbiShopping</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                Para a <strong>revitalização de áreas do MorumbiShopping</strong>, realizamos a execução de revestimentos com <strong>WPC da Arkos</strong>, aplicados nas áreas dos <strong>elevadores e banheiros</strong>.
+                                <br><br>
+                                A solução foi escolhida para unir <strong>sofisticação, conforto visual e praticidade</strong>, trazendo a aparência e o aconchego da madeira para os ambientes. O material oferece <strong>durabilidade e baixa necessidade de manutenção</strong>, atendendo perfeitamente às demandas de um empreendimento de alto fluxo.
+                            </p>
+                            <div class="flex flex-col gap-2 pt-2 border-t border-gray-100">
+                                <span class="text-xs font-semibold text-gray-800 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Revestimentos Premium
+                                </span>
+                                <span class="text-xs font-semibold text-blue-700 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> Tecnologia WPC
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Imagem Panorâmica -->
+                        <div class="lg:col-span-8 w-full aspect-[2/1] rounded-sm overflow-hidden relative group bg-gray-100 shadow-sm order-1 lg:order-2">
+                            <button onclick="this.nextElementSibling.scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <div class="carousel-container flex gap-0 overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full">
+                                <img src="../imagens/Portifolho/obras/mor/moru (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 1">
+                                <img src="../imagens/Portifolho/obras/mor/moru (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 2">
+                                <img src="../imagens/Portifolho/obras/mor/moru (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 3">
+                                <img src="../imagens/Portifolho/obras/mor/moru (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 4">
+                                <img src="../imagens/Portifolho/obras/mor/moru (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 5">
+                                <img src="../imagens/Portifolho/obras/mor/moru (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 6">
+                                <img src="../imagens/Portifolho/obras/mor/moru (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 7">
+                                <img src="../imagens/Portifolho/obras/mor/moru (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 8">
+                                <img src="../imagens/Portifolho/obras/mor/moru (9).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 9">
+                                <img src="../imagens/Portifolho/obras/mor/moru (10).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 10">
+                                <img src="../imagens/Portifolho/obras/mor/moru (11).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 11">
+                                <img src="../imagens/Portifolho/obras/mor/moru (12).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Shopping Morumbi 12">
+                            </div>
+                            <button onclick="this.previousElementSibling.scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-sm md:hidden pointer-events-none z-10">Deslize &rarr;</div>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 3: ESTANDE ARKOS (IMAGEM ESQUERDA) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 border-b border-gray-100 pb-16">
+                        <!-- Imagem Panorâmica -->
+                        <div class="lg:col-span-8 w-full aspect-[2/1] rounded-sm overflow-hidden relative group bg-gray-100 shadow-sm order-1">
+                            <button onclick="this.nextElementSibling.scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <div class="carousel-container flex gap-0 overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full">
+                                <img src="../imagens/Portifolho/obras/ark/ark (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 1">
+                                <img src="../imagens/Portifolho/obras/ark/ark (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 2">
+                                <img src="../imagens/Portifolho/obras/ark/ark (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 3">
+                                <img src="../imagens/Portifolho/obras/ark/ark (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 4">
+                                <img src="../imagens/Portifolho/obras/ark/ark (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 5">
+                                <img src="../imagens/Portifolho/obras/ark/ark (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 6">
+                                <img src="../imagens/Portifolho/obras/ark/ark (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 7">
+                                <img src="../imagens/Portifolho/obras/ark/ark (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Expo Revestir 8">
+                            </div>
+                            <button onclick="this.previousElementSibling.scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-sm md:hidden pointer-events-none z-10">Deslize &rarr;</div>
+                        </div>
+                        
+                        <div class="lg:col-span-4 flex flex-col justify-center space-y-4 order-2">
+                            <div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Eventos e Arquitetura</span>
+                                <h3 class="text-2xl font-bold text-gray-900 leading-snug">Estande Arkos – Expo Revestir</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                Responsáveis pela <strong>montagem técnica do estande oficial da Arkos</strong> em um dos maiores eventos de arquitetura e revestimentos da América Latina. O foco da nossa equipe foi entregar uma vitrine com <strong>precisão milimétrica</strong> em cada encaixe e acabamento.
+                            </p>
+                            <div class="flex flex-col gap-2 pt-2 border-t border-gray-100">
+                                <span class="text-xs font-semibold text-gray-800 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Montagem Executiva
+                                </span>
+                                <span class="text-xs font-semibold text-blue-700 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> Painéis Arkos WPC
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 4: MCDONALDS (IMAGEM DIREITA) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 border-b border-gray-100 pb-16">
+                        <div class="lg:col-span-4 flex flex-col justify-center space-y-4 order-2 lg:order-1">
+                            <div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Fachadas Corporativas</span>
+                                <h3 class="text-2xl font-bold text-gray-900 leading-snug">Fachadas McDonald's</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                Com mais de <strong>100 unidades executadas em diferentes regiões do Brasil</strong>, realizamos a aplicação de <strong>revestimentos em ACM nas fachadas das lojas McDonald's</strong>, incluindo grandes planos de fachada, pilares, pingadeiras e demais elementos de acabamento.
+                                <br><br>
+                                Nosso trabalho combina <strong>precisão, qualidade e padronização</strong>, garantindo consistência visual em diferentes unidades.
+                                <br><br>
+                                Entre os projetos, destaca-se o <strong>Méqui Paraíso</strong>, a unidade do McDonald's mais sustentável da América Latina. Além dos revestimentos em ACM, realizamos a <strong>instalação de brises em ACM</strong>, integrando funcionalidade e identidade arquitetônica ao projeto, que possui soluções voltadas à <strong>inovação e sustentabilidade</strong>.
+                            </p>
+                            <div class="flex flex-col gap-2 pt-2 border-t border-gray-100">
+                                <span class="text-xs font-semibold text-gray-800 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Revestimentos e Fachadas
+                                </span>
+                                <span class="text-xs font-semibold text-blue-700 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> Revestimentos em ACM
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Imagem Panorâmica -->
+                        <div class="lg:col-span-8 w-full aspect-[2/1] rounded-sm overflow-hidden relative group bg-gray-100 shadow-sm order-1 lg:order-2">
+                            <button onclick="this.nextElementSibling.scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <div class="carousel-container flex gap-0 overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full">
+                                <img src="../imagens/Portifolho/obras/mc/mc (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Fachada McDonald's 1">
+                                <img src="../imagens/Portifolho/obras/mc/mc (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Fachada McDonald's 2">
+                                <img src="../imagens/Portifolho/obras/mc/mc (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Fachada McDonald's 3">
+                                <img src="../imagens/Portifolho/obras/mc/mc (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Fachada McDonald's 4">
+                                <img src="../imagens/Portifolho/obras/mc/mc (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Fachada McDonald's 5">
+                                <img src="../imagens/Portifolho/obras/mc/mc (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Fachada McDonald's 6">
+                                <img src="../imagens/Portifolho/obras/mc/mc (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Fachada McDonald's 7">
+                            </div>
+                            <button onclick="this.previousElementSibling.scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-sm md:hidden pointer-events-none z-10">Deslize &rarr;</div>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 5: INSTITUTO PECEGE (IMAGEM ESQUERDA) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 border-b border-gray-100 pb-16">
+                        <!-- Imagem Panorâmica -->
+                        <div class="lg:col-span-8 w-full aspect-[2/1] rounded-sm overflow-hidden relative group bg-gray-100 shadow-sm order-1">
+                            <button onclick="this.nextElementSibling.scrollBy({left: -400, behavior: 'smooth'})" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <div class="carousel-container flex gap-0 overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full">
+                                <img src="../imagens/Portifolho/obras/ip/ip (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 1">
+                                <img src="../imagens/Portifolho/obras/ip/ip (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 2">
+                                <img src="../imagens/Portifolho/obras/ip/ip (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 3">
+                                <img src="../imagens/Portifolho/obras/ip/ip (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 4">
+                                <img src="../imagens/Portifolho/obras/ip/ip (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 5">
+                                <img src="../imagens/Portifolho/obras/ip/ip (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 6">
+                                <img src="../imagens/Portifolho/obras/ip/ip (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 7">
+                            </div>
+                            <button onclick="this.previousElementSibling.scrollBy({left: 400, behavior: 'smooth'})" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-blue-600 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hidden md:flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-sm md:hidden pointer-events-none z-10">Deslize &rarr;</div>
+                        </div>
+                        
+                        <div class="lg:col-span-4 flex flex-col justify-center space-y-4 order-2">
+                            <div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Setor Educacional</span>
+                                <h3 class="text-2xl font-bold text-gray-900 leading-snug">Instituto Pecege</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                Neste projeto, realizamos a <strong>instalação de revestimentos em WPC e coberturas em policarbonato</strong>, combinando estética, funcionalidade e desempenho para atender às características arquitetônicas do empreendimento.
+                                <br><br>
+                                O <strong>WPC</strong>, com acabamento amadeirado, contribui para a identidade visual e o conforto dos ambientes, enquanto o <strong>policarbonato translúcido</strong> favorece a entrada de iluminação natural.
+                                <br><br>
+                                A execução foi realizada com foco em <strong>precisão, qualidade de acabamento e integração entre os materiais</strong>, valorizando a arquitetura e o conceito do projeto.
+                            </p>
+                            <div class="flex flex-col gap-2 pt-2 border-t border-gray-100">
+                                <span class="text-xs font-semibold text-gray-800 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Revestimentos WPC
+                                </span>
+                                <span class="text-xs font-semibold text-blue-700 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> Policarbonato
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ABA 2: GALERIA GERAL DE FOTOS -->
+            <div id="galeria-fotos" class="tab-pane hidden fade-in mt-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                    
+                    <!-- INÍCIO DAS FOTOS -->
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (1).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 1">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (2).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 2">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (3).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 3">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (4).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 4">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (5).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 5">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (6).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 6">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (7).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 7">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (8).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 8">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (9).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 9">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (10).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 10">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (11).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 11">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (12).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 12">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (13).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 13">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (14).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 14">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (15).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 15">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (16).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 16">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (17).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 17">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (18).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 18">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (19).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 19">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (20).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 20">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (21).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 21">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (22).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 22">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (23).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 23">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (24).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 24">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (25).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 25">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (26).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 26">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (27).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 27">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (28).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 28">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (29).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 29">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (30).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 30">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (31).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 31">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (32).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 32">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (33).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 33">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (34).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 34">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (35).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 35">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (36).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 36">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (37).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 37">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (38).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 38">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (39).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 39">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (40).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 40">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (41).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 41">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (42).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 42">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (43).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 43">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-sm bg-gray-100 aspect-square shadow-sm group cursor-pointer">
+                        <img src="../imagens/Portifolho/capa (44).jpg" class="gallery-img w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Galeria 44">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- FIM DAS FOTOS -->
+
+                </div>
+            </div>
+
+        </section>
+    </div> <!-- FIM DO WRAPPER -->
+
+    <!-- SEÇÃO CALL TO ACTION (SEPARADA ANTES DO RODAPÉ) -->
+    <section class="py-12 md:py-16 bg-blue-600 text-white text-center px-4">
+        <div class="max-w-3xl mx-auto space-y-4">
+            <h2 class="text-xl md:text-3xl font-bold tracking-tight">O próximo caso de sucesso pode ser a sua obra.</h2>
+            <p class="text-blue-100 font-light text-xs md:text-base">
+                Agende uma vistoria in loco com nossa equipe de engenharia e descubra a solução técnica perfeita para o seu projeto corporativo ou industrial.
+            </p>
+            <div class="pt-2">
+                <a href="contato.html" class="inline-block bg-white text-blue-600 font-bold px-7 py-3 uppercase tracking-widest text-xs transition rounded-sm shadow-lg hover:bg-gray-100 hover:-translate-y-0.5 transform duration-300">
+                    Falar com Especialista
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-xs md:text-sm text-center md:text-left border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+                <img src="../imagens/logo fundo branco.png" alt="logo fundo branco" class="h-10 w-auto mx-auto md:mx-0 mb-3">
+                <p class="leading-relaxed">Especialistas em montagens técnicas de alto padrão.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Contato</h4>
+                <div class="space-y-1 text-xs">
+                    <p class="text-gray-300">(11) 94747–7099 — Eng. Fernando</p>
+                    <p class="text-gray-300">(11) 99344–7599 — Paulo Cézar</p>
+                    <p class="text-gray-300">pc@montateceng.com.br</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Sede Administrativa</h4>
+                <p class="leading-relaxed text-gray-300 text-xs">Av. Brigadeiro Faria Lima, 1616 / 1⁰ andar sala 105/106 - Jardim Paulistano, São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-[10px] border-t border-gray-800 pt-4 text-gray-500">
+            &copy; 2026 Monta-Tec Engenharia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- MENU MOBILE LATERAL (DRAWER) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-gray-950/40 backdrop-blur-sm transition-opacity duration-300">
+        <div id="mobile-menu-panel" class="bg-white w-4/5 max-w-sm h-full ml-auto p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
+                    <img src="../imagens/logo.png" alt="Monta-Tec" class="h-10 w-auto">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 focus:outline-none p-2 rounded-sm hover:bg-gray-50 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="flex flex-col space-y-2 text-base font-semibold text-gray-700 mt-4">
+                    <a href="index.html" class="mobile-link hover:text-blue-600 transition py-2.5 px-3 rounded-sm block">INÍCIO</a>
+                    <a href="servicos.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">SERVIÇOS</a>
+                    <a href="portfolio.html" class="mobile-link text-blue-600 bg-blue-50/50 transition py-2.5 px-3 rounded-sm block">PORTFÓLIO</a>
+                    <a href="empresa.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">EMPRESA</a>
+                    <a href="contato.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">CONTATO</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE IMAGEM TELA CHEIA -->
+    <div id="image-modal" class="fixed inset-0 z-[100] bg-black/95 hidden flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 opacity-0">
+        <button id="close-modal" class="absolute top-4 right-4 md:top-8 md:right-8 text-gray-400 hover:text-white p-2 transition-colors z-50">
+            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <img id="modal-image" src="" class="max-w-[95vw] max-h-[90vh] object-contain rounded-sm shadow-2xl scale-95 transition-transform duration-300" alt="Imagem Ampliada">
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const header = document.getElementById('main-header');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Header Inteligente
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) {
+                header.classList.remove('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+                header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.add('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+            }
+        });
+
+        // Menu Mobile
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => { mobileMenuPanel.classList.remove('translate-x-full'); }, 10);
+        }
+        function closeMenu() {
+            mobileMenuPanel.classList.add('translate-x-full');
+            setTimeout(() => { mobileMenu.classList.add('hidden'); }, 300);
+        }
+        menuBtn.addEventListener('click', (e) => { e.stopPropagation(); openMenu(); });
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => { if (!mobileMenuPanel.contains(e.target)) { closeMenu(); } });
+        mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+
+        // Lógica das Abas (Tabs) estilo Segmented Control / Pílula
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove estilos de ativo de todos os botões
+                tabBtns.forEach(b => { 
+                    b.classList.remove('bg-white', 'text-blue-600', 'shadow-sm'); 
+                    b.classList.add('text-gray-500', 'hover:text-gray-900'); 
+                });
+                
+                // Adiciona estilos de ativo no botão clicado
+                btn.classList.remove('text-gray-500', 'hover:text-gray-900');
+                btn.classList.add('bg-white', 'text-blue-600', 'shadow-sm');
+                
+                // Troca o conteúdo da aba
+                tabPanes.forEach(pane => { pane.classList.add('hidden'); });
+                document.getElementById(btn.getAttribute('data-target')).classList.remove('hidden');
+            });
+        });
+
+        // Carrossel Automático
+        const carousels = document.querySelectorAll('.carousel-container');
+        carousels.forEach(carousel => {
+            let slideTimer;
+            function startSlide() {
+                slideTimer = setInterval(() => {
+                    if (carousel.offsetParent === null) return;
+                    const slideWidth = carousel.clientWidth;
+                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                    if (carousel.scrollLeft >= maxScroll - 10) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: slideWidth, behavior: 'smooth' });
+                    }
+                }, 5000); 
+            }
+            startSlide();
+            carousel.parentElement.addEventListener('mouseenter', () => clearInterval(slideTimer));
+            carousel.parentElement.addEventListener('mouseleave', startSlide);
+            carousel.parentElement.addEventListener('touchstart', () => clearInterval(slideTimer), {passive: true});
+            carousel.parentElement.addEventListener('touchend', startSlide, {passive: true});
+            carousel.parentElement.addEventListener('touchcancel', startSlide, {passive: true});
+        });
+
+        // Lógica da Lightbox (Modal de Fotos)
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-image');
+        const closeModalBtn = document.getElementById('close-modal');
+        const galleryImages = document.querySelectorAll('.gallery-img');
+
+        function openModal(src) {
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalImg.classList.remove('scale-95');
+                modalImg.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+            }, 300);
+        }
+
+        galleryImages.forEach(img => {
+            const container = img.parentElement;
+            container.addEventListener('click', () => {
+                openModal(img.src);
+            });
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+        });
+    </script>
+</body>
+</html>

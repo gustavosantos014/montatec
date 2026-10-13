@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Monta-Tec Engenharia</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../imagens/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Animação do Carrossel de Fornecedores Mobile */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 relative pt-16 md:pt-20">
+
+    <!-- CABEÇALHO / MENU COMPACTO UNIFICADO -->
+    <header id="main-header" class="bg-gradient-to-b from-white/90 via-white/50 to-transparent fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-3.5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../imagens/logo.png" alt="Monta-Tec Engenharia" class="h-12 md:h-16 w-auto">
+            </a>
+            
+            <nav id="desktop-nav" class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-800 transition-colors duration-300">
+                <a href="index.html" class="hover:text-blue-600 transition">INÍCIO</a>
+                <a href="servicos.html" class="text-blue-600 transition">SERVIÇOS</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition">PORTFÓLIO</a>
+                <a href="empresa.html" class="hover:text-blue-600 transition">EMPRESA</a>
+                <a href="contato.html" class="hover:text-blue-600 transition">CONTATO</a>
+            </nav>
+
+            <button id="menu-btn" class="lg:hidden text-gray-800 focus:outline-none p-2 transition-colors duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER INTERNO HERO -->
+    <section class="relative min-h-[50vh] flex items-center justify-center text-center px-4 md:px-8 bg-slate-950 text-white pt-36 pb-20" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        <div class="max-w-5xl mx-auto space-y-4 text-center">
+            <span class="text-xs font-bold text-blue-500 uppercase tracking-widest block mx-auto">Engenharia de Execução</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mx-auto">
+                Soluções Completas <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200 font-light">Monta-Tec</span>
+            </h1>
+            <p class="text-gray-300 font-light text-sm md:text-base max-w-2xl mx-auto pt-2">Instalação e uma metodologia rigorosa que assegura montagens perfeitas dentro do seu cronograma.</p>
+            <div class="w-12 h-0.5 bg-blue-500 mx-auto mt-4"></div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: ÁREAS DE ATUAÇÃO / SERVIÇOS -->
+    <section class="py-12 md:py-16 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">O que fazemos</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Nossos Serviços</h2>
+                <div class="w-12 h-0.5 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Serviço 1 -->
+                <div class="bg-gray-50 p-6 md:p-8 border border-gray-100 rounded-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-600 rounded-full block flex-shrink-0"></span> Comercialização
+                    </h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Cotações ágeis e as melhores condições do mercado. Fornecemos brises, revestimentos e soluções arquitetônicas.
+                    </p>
+                </div>
+                <!-- Serviço 2 -->
+                <div class="bg-gray-50 p-6 md:p-8 border border-gray-100 rounded-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-600 rounded-full block flex-shrink-0"></span> Instalação
+                    </h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Equipe altamente capacitada para garantir execuções seguras, priorizando a estabilidade e a estética do projeto.
+                    </p>
+                </div>
+                <!-- Serviço 3 -->
+                <div class="bg-gray-50 p-6 md:p-8 border border-gray-100 rounded-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-600 rounded-full block flex-shrink-0"></span> Projetos
+                    </h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Elaboração de projetos executivos e compatibilização estrutural. Cuidado aos detalhes antes do início da obra.
+                    </p>
+                </div>
+                <!-- Serviço 4 -->
+                <div class="bg-gray-50 p-6 md:p-8 border border-gray-100 rounded-sm hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-600 rounded-full block flex-shrink-0"></span> Medição In Loco
+                    </h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Vistorias e medições diretas na obra para eliminar falhas de fabricação. Orçamentos precisos e sem compromisso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WRAPPER: CATÁLOGO DE PRODUTOS -->
+    <div class="relative w-full">
+
+        <!-- MENU STICKY DE PRODUTOS -->
+        <div id="sticky-menu" class="sticky top-[76px] md:top-[92px] z-40 bg-white border-b border-gray-200 shadow-sm pt-4 pb-3 transition-all duration-300">
+            <div class="text-center mb-3 lg:hidden flex justify-center w-full px-4">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest block">Catálogo de Produtos</span>
+            </div>
+            
+            <div class="max-w-5xl mx-auto px-4 flex justify-start md:justify-center gap-2 overflow-x-auto no-scrollbar snap-x snap-mandatory" id="tabs-nav">
+                <button class="tab-btn px-5 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap rounded-full bg-blue-600 text-white shadow-sm snap-center transition-all flex-shrink-0" data-target="brises">Sistemas de Brises</button>
+                <button class="tab-btn px-5 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 hover:text-gray-900 snap-center transition-all flex-shrink-0" data-target="revestimentos">Revestimentos</button>
+                <button class="tab-btn px-5 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 hover:text-gray-900 snap-center transition-all flex-shrink-0" data-target="forros">Forros</button>
+                <button class="tab-btn px-5 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 hover:text-gray-900 snap-center transition-all flex-shrink-0" data-target="esquadrias">Esquadrias</button>
+                <button class="tab-btn px-5 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 hover:text-gray-900 snap-center transition-all flex-shrink-0" data-target="policarbonatos">Policarbonatos</button>
+                <button class="tab-btn px-5 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 hover:text-gray-900 snap-center transition-all flex-shrink-0" data-target="decks">Decks</button>
+            </div>
+        </div>
+
+        <!-- ÁREA DE CONTEÚDO DOS PRODUTOS -->
+        <section class="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16">
+            <div class="w-full bg-white p-5 md:p-10 border border-gray-200 rounded-sm shadow-sm min-h-[500px]" id="tabs-content">
+                
+                <!-- TAB BRISES -->
+                <div id="brises" class="tab-pane fade-in space-y-12 md:space-y-16">
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Controle Solar e Estética</span>
+                                <h3 class="text-2xl font-bold text-gray-900">Brises Metálicos</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os brises metálicos são soluções arquitetônicas desenvolvidas para controlar a incidência solar, reduzir o ganho térmico e valorizar a estética das fachadas. Fabricados em alumínio ou aço, aliam resistência, durabilidade e baixa manutenção a um design moderno e versátil.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/servicos/brise/brise (1).jpeg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Metálico 1">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light">
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Material</strong>Alumínio ou Aço de alta resistência.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Funcionalidade</strong>Redução de ganho térmico e ventilação.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Customização</strong>Diferentes formatos e modulações.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Indicação</strong>Corporativo, industrial e residencial.</div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Design Natural e Durabilidade</span>
+                                <h3 class="text-2xl font-bold text-gray-900">Brises Amadeirados (WPC)</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os brises amadeirados combinam a elegância da madeira com a resistência da tecnologia Wood Plastic Composite. Ideais para fachadas, áreas externas e elementos de sombreamento, oferecem alta durabilidade, resistência à umidade, pragas e intempéries.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/servicos/brise/brise m (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 1">
+                                <img src="../imagens/servicos/brise/brise m (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 2">
+                                <img src="../imagens/servicos/brise/brise m (2.5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 2">
+                                <img src="../imagens/servicos/brise/brise m (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 3">
+                                <img src="../imagens/servicos/brise/brise m (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 4">
+                                <img src="../imagens/servicos/brise/brise m (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 5">
+                                <img src="../imagens/servicos/brise/brise m (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 6">  
+                                <img src="../imagens/servicos/brise/brise m (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 7"> 
+                                <img src="../imagens/servicos/brise/brise m (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 8">
+                                <img src="../imagens/servicos/brise/brise m (9).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 9">  
+                                <img src="../imagens/servicos/brise/brise m (10).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 10">
+                                <img src="../imagens/servicos/brise/brise m (11).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 11">
+                                <img src="../imagens/servicos/brise/brise m (12).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 11">
+                                <img src="../imagens/servicos/brise/brise m (13).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 11">
+                                <img src="../imagens/Portifolho/capa (15).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt= "ACM">
+                                <img src="../imagens/servicos/brise/capa (14).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt= "ACM">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light">
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Material</strong>Composto Wood Plastic Composite.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Durabilidade</strong>Resistência a umidade e intempéries.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Estética</strong>Visual natural e elegante da madeira.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Indicação</strong>Fachadas, sombreamentos e áreas externas.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB REVESTIMENTOS -->
+                <div id="revestimentos" class="tab-pane hidden fade-in space-y-12 md:space-y-16">
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Modernidade e Leveza</span>
+                                <h3 class="text-2xl font-bold text-gray-900">Revestimentos em ACM</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os revestimentos em ACM oferecem uma solução moderna e sofisticada para fachadas, marquises, platibandas e elementos arquitetônicos. Com acabamento de alto padrão, excelente resistência às intempéries e baixa necessidade de manutenção, proporcionam leveza e durabilidade.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/capa/inicio (6).jpeg" class="shrink-0 w-full h-full object-cover snap-center" alt= "ACM">
+                                <img src="../imagens/servicos/revestimento/acm (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 2">
+                                <img src="../imagens/servicos/revestimento/acm (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 3">                       
+                                <img src="../imagens/servicos/revestimento/acm (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 4">
+                                <img src="../imagens/servicos/revestimento/acm (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 5">    
+                                <img src="../imagens/servicos/revestimento/acm (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 6">
+                                <img src="../imagens/servicos/revestimento/acm (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 7">
+                                <img src="../imagens/servicos/revestimento/acm (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 8">
+                                <img src="../imagens/servicos/revestimento/acm (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 9">    
+                                <img src="../imagens/servicos/revestimento/acm (9).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 10">
+                                <img src="../imagens/servicos/revestimento/acm (10).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 11">
+                                <img src="../imagens/servicos/revestimento/acm (11).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="acm 12">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light">
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Composição</strong>Alumínio Composto de alta planicidade.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Resistência</strong>Alta proteção contra intempéries e UV.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Acabamento</strong>Ampla paleta de cores e texturas.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Indicação</strong>Fachadas, marquises, platibandas e totens.</div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Design e Versatilidade</span>
+                                <h3 class="text-2xl font-bold text-gray-900">Revestimentos Metálicos</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os revestimentos metálicos são soluções versáteis para fachadas, projetos de retrofit e ambientes internos e externos. Fabricados em alumínio ou aço galvanizado, combinam alta durabilidade, resistência e design arquitetônico, permitindo a criação de fachadas personalizadas.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/servicos/revestimento/met (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento Metálico 1">
+                                <img src="../imagens/servicos/revestimento/met (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento Metálico 2">
+                                <img src="../imagens/servicos/revestimento/met (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento Metálico 3"> 
+                                <img src="../imagens/servicos/revestimento/met (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento Metálico 4">
+                                <img src="../imagens/servicos/revestimento/met (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento Metálico 5">
+                                <img src="../imagens/servicos/revestimento/met (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento Metálico 6">
+                                <img src="../imagens/servicos/revestimento/met (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento Metálico 7">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light">
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Material</strong>Alumínio ou Aço Galvanizado super-resistente.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Customização</strong>Chapas lisas, perfuradas ou com cortes a laser.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Instalação</strong>Montagem ágil com fixação aparente ou oculta.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Indicação</strong>Retrofits, fachadas exclusivas e interiores.</div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <!-- Novo Revestimento WPC -->
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Aconchego e Resistência</span>
+                                <h3 class="text-2xl font-bold text-gray-900">Revestimentos em WPC</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os revestimentos em Wood Plastic Composite (WPC) como painéis ripados oferecem o requinte visual e a textura da madeira natural, mas com uma resistência mecânica e durabilidade muito superiores. São impermeáveis, imunes a cupins e não exigem os constantes tratamentos da madeira tradicional, sendo perfeitos para fachadas de alto padrão e painéis decorativos internos ou externos.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/servicos/revestimento/wpc (0).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 0">
+                                <img src="../imagens/servicos/revestimento/wpc (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 1">
+                                <img src="../imagens/servicos/revestimento/wpc (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (2.5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 3">
+                                <img src="../imagens/servicos/revestimento/wpc (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (5.5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (8.5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (9).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (10).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                                <img src="../imagens/servicos/revestimento/wpc (11).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Revestimento wpc 2">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light">
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Material</strong>Composto de Madeira e Plástico (WPC).</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Modelos</strong>Painéis ripados e lambris.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Vantagem</strong>Zero manutenção, resistente a água e sol.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Indicação</strong>Fachadas, muros e painéis decorativos.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB FORROS -->
+                <div id="forros" class="tab-pane hidden fade-in space-y-12 md:space-y-16">
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Sofisticação Natural</span>
+                                <h3 class="text-2xl font-bold text-gray-900">Forros Arkos (WPC)</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os forros WPC Arkos combinam a beleza e o aconchego da madeira com a alta resistência do Wood Plastic Composite (WPC). Desenvolvidos para oferecer durabilidade superior, são resistentes à umidade, pragas e intempéries, dispensando manutenção frequente.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/capa/inicio (7).jpeg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 0"> 
+                                <img src="../imagens/servicos/forro/forro (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 1">
+                                <img src="../imagens/servicos/forro/forro (1.5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 1.5">
+                                <img src="../imagens/servicos/forro/forro (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 2">
+                                <img src="../imagens/servicos/forro/forro (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 3">
+                                <img src="../imagens/servicos/forro/forro (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 4">
+                                <img src="../imagens/servicos/forro/forro (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 5">
+                                <img src="../imagens/servicos/forro/forro (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 6">
+                                <img src="../imagens/Portifolho/capa (41).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt= "ACM">
+                                <img src="../imagens/servicos/forro/forro (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 8">
+                                <img src="../imagens/servicos/forro/forro (9).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 9">
+                                <img src="../imagens/servicos/forro/forro (10).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 10">
+                                <img src="../imagens/servicos/forro/forro (11).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 11">
+                                <img src="../imagens/servicos/forro/forro (12).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="forro WPC 12">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light">
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Material</strong>Composto Wood Plastic Composite.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Durabilidade</strong>Dispensa manutenção e resiste à umidade.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Estética</strong>Tonalidades com beleza e aconchego da madeira.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Indicação</strong>Ambientes internos e externos sofisticados.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB ESQUADRIAS -->
+                <div id="esquadrias" class="tab-pane hidden fade-in space-y-6">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-end border-b border-gray-100 pb-4 gap-2">
+                        <div class="space-y-1">
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block">Esquadrias de Alumínio</span>
+                            <h3 class="text-2xl font-bold text-gray-900 tracking-tight">Sistemas de Esquadrias de Alta Performance</h3>
+                        </div>
+                        <a href="portfolio.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition flex-shrink-0">
+                            Ver obras realizadas &rarr;
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+                        <div class="bg-gray-50 border border-gray-100 rounded-sm overflow-hidden flex flex-col justify-between shadow-sm">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+                                <img src="../imagens/servicos/esquadria/esquadria des (2.1).jpg" class="w-full h-full object-cover" alt="Deslizantes">                                      
+                            </div>
+                            <div class="p-4 space-y-2 flex-grow">
+                                <h4 class="font-bold text-sm text-gray-900 border-l-2 border-blue-600 pl-2">Deslizantes</h4>
+                                <p class="text-gray-500 text-xs md:text-sm font-light leading-relaxed">Sistemas com folhas deslizantes sobre trilhos de alta precisão, ideais para otimizar espaços e proporcionar ampla entrada de luz natural. Oferecem deslizamento suave, excelente vedação e integração.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 border border-gray-100 rounded-sm overflow-hidden flex flex-col justify-between shadow-sm">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+                                <img src="../imagens/servicos/esquadria/esquadria cam (1).jpg" class="w-full h-full object-cover" alt="Camarão">
+                            </div>
+                            <div class="p-4 space-y-2 flex-grow">
+                                <h4 class="font-bold text-sm text-gray-900 border-l-2 border-blue-600 pl-2">Camarão</h4>
+                                <p class="text-gray-500 text-xs md:text-sm font-light leading-relaxed">Esquadrias com folhas articuladas que se recolhem lateralmente, permitindo abertura de até 95% do vão. São ideais para projetos que valorizam integração, ventilação e flexibilidade dos ambientes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 border border-gray-100 rounded-sm overflow-hidden flex flex-col justify-between shadow-sm">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+                                <img src="../imagens/servicos/esquadria/esquadria piv (1).jpg" class="w-full h-full object-cover" alt="Pivotantes">
+                            </div>
+                            <div class="p-4 space-y-2 flex-grow">
+                                <h4 class="font-bold text-sm text-gray-900 border-l-2 border-blue-600 pl-2">Pivotantes</h4>
+                                <p class="text-gray-500 text-xs md:text-sm font-light leading-relaxed">Portas de grandes dimensões com abertura por pivôs de alta resistência, proporcionando um visual imponente e contemporâneo. Combinam robustez estrutural, leveza e acabamento sofisticado.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 border border-gray-100 rounded-sm overflow-hidden flex flex-col justify-between shadow-sm">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+                                <img src="../imagens/servicos/esquadria/esquadria giro (2).jpg" class="w-full h-full object-cover object-[center_60%]" alt="De Giro">
+                            </div>
+                            <div class="p-4 space-y-2 flex-grow">
+                                <h4 class="font-bold text-sm text-gray-900 border-l-2 border-blue-600 pl-2">De Giro</h4>
+                                <p class="text-gray-500 text-xs md:text-sm font-light leading-relaxed">Sistema tradicional com abertura por dobradiças, desenvolvido para oferecer alta vedação, segurança e desempenho acústico. Disponível em diversas configurações para atender todo tipo de projeto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB POLICARBONATOS -->
+                <div id="policarbonatos" class="tab-pane hidden fade-in space-y-12 md:space-y-16">
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Luz Natural Controlada</span>
+                                <h3 class="text-2xl font-bold text-gray-900 tracking-tight">Sistemas em Policarbonato</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os sistemas em policarbonato são soluções leves, resistentes e de alta performance para coberturas, fechamentos e projetos que valorizam a iluminação natural. Com elevada resistência a impactos e proteção contra os raios UV, proporcionam excelente durabilidade, conforto térmico e redução da necessidade de iluminação artificial.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/servicos/policarbonato/pol (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 1">
+                                <img src="../imagens/servicos/policarbonato/pol (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 2">
+                                <img src="../imagens/servicos/policarbonato/pol (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 3">
+                                <img src="../imagens/servicos/policarbonato/pol (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 4">
+                                <img src="../imagens/servicos/policarbonato/pol (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 5">  
+                                <img src="../imagens/Portifolho/capa (13).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 10">
+                                <img src="../imagens/servicos/policarbonato/pol (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 6">                                       
+                                <img src="../imagens/servicos/policarbonato/pol (7).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 7">
+                                <img src="../imagens/servicos/policarbonato/pol (8).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 8">
+                                <img src="../imagens/servicos/policarbonato/pol (9).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Policarbonato 9">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light border-t border-gray-100 pt-6">
+                            <div class="p-4 bg-gray-50 rounded-sm shadow-sm border-l-4 border-blue-600"><strong class="block text-gray-900 font-semibold mb-1">Tipologias</strong>Chapas alveolares (térmicas) ou compactas.</div>
+                            <div class="p-4 bg-gray-50 rounded-sm shadow-sm border-l-4 border-blue-600"><strong class="block text-gray-900 font-semibold mb-1">Resistência</strong>Até 250x superior ao vidro comum.</div>
+                            <div class="p-4 bg-gray-50 rounded-sm shadow-sm border-l-4 border-blue-600"><strong class="block text-gray-900 font-semibold mb-1">Proteção Solar</strong>Barreira de coextrusão anti-UV.</div>
+                            <div class="p-4 bg-gray-50 rounded-sm shadow-sm border-l-4 border-blue-600"><strong class="block text-gray-900 font-semibold mb-1">Aplicação</strong>Disponíveis em diferentes espessuras e cores.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB DECKS -->
+                <div id="decks" class="tab-pane hidden fade-in space-y-12 md:space-y-16">
+                    <div>
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center mb-6 md:mb-8">
+                            <div class="md:col-span-6 space-y-3 md:space-y-4">
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Áreas Externas e Lazer</span>
+                                <h3 class="text-2xl font-bold text-gray-900">Decks de Alta Performance (WPC)</h3>
+                                <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed">
+                                    Os decks em WPC (Wood Plastic Composite) unem a beleza e o toque natural da madeira à extrema durabilidade da tecnologia sintética. Desenvolvidos para áreas externas, piscinas, varandas e varandas gourmet, não criam farpas, são antiderrapantes, imunes a pragas e altamente resistentes à umidade e aos raios UV, garantindo sofisticação e zero manutenção frequente.
+                                </p>
+                            </div>
+                            <div class="md:col-span-6 carousel-container flex gap-2 overflow-x-auto snap-x snap-mandatory no-scrollbar h-56 md:h-64 rounded-sm">
+                                <img src="../imagens/servicos/deck/deck (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 3">
+                                <img src="../imagens/servicos/deck/deck (2).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 5">
+                                <img src="../imagens/servicos/deck/deck (3).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 3">
+                                <img src="../imagens/servicos/deck/deck (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 3">
+                                <img src="../imagens/servicos/deck/deck (5).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 3">
+                                <img src="../imagens/servicos/deck/deck (6).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 3">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs md:text-sm font-light">
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Material</strong>Composto Wood Plastic Composite (WPC).</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Segurança</strong>Antiderrapante e livre de farpas.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Durabilidade</strong>Resistência total a intempéries e umidade.</div>
+                            <div class="p-4 bg-gray-50 border-l-4 border-blue-600 rounded-sm shadow-sm"><strong class="block text-gray-900 font-semibold mb-1">Indicação</strong>Piscina, varandas e áreas de lazer externas.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div> <!-- FIM DO WRAPPER DE PRODUTOS -->
+
+    <!-- METODOLOGIA / FLUXO DE TRABALHO -->
+    <section class="py-16 bg-gray-50 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Metodologia Exclusiva</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Como a Monta-Tec Trabalha</h2>
+                <div class="w-12 h-0.5 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Passo 1 -->
+                <div class="relative bg-white p-8 border border-gray-100 rounded-sm shadow-sm hover:shadow-md transition group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-blue-100 group-hover:bg-blue-600 transition-colors duration-300"></div>
+                    <div class="text-5xl font-black text-gray-100 mb-4 group-hover:text-blue-50 transition-colors duration-300">01</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 border-l-2 border-blue-600 pl-3">Estudo e Alinhamento Técnico</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Analisamos minuciosamente o escopo civil e arquitetônico do projeto. Realizamos a conferência de paginações, compatibilização com projetos complementares e vistorias detalhadas "in loco".
+                    </p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="relative bg-white p-8 border border-gray-100 rounded-sm shadow-sm hover:shadow-md transition group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-blue-100 group-hover:bg-blue-600 transition-colors duration-300"></div>
+                    <div class="text-5xl font-black text-gray-100 mb-4 group-hover:text-blue-50 transition-colors duration-300">02</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 border-l-2 border-blue-600 pl-3">Logística e Fornecimento</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Por atuarmos em conexão direta com as principais matrizes industriais de diversos segmentos, coordenamos as entregas no canteiro de obras em lotes programados.
+                    </p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="relative bg-white p-8 border border-gray-100 rounded-sm shadow-sm hover:shadow-md transition group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-blue-100 group-hover:bg-blue-600 transition-colors duration-300"></div>
+                    <div class="text-5xl font-black text-gray-100 mb-4 group-hover:text-blue-50 transition-colors duration-300">03</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 border-l-2 border-blue-600 pl-3">Montagem de Alta Precisão</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Nossa equipe técnica altamente especializada executa a montagem estrutural sob os mais rigorosos padrões de segurança (incluindo conformidade total com as normas NR-35).
+                    </p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="relative bg-white p-8 border border-gray-100 rounded-sm shadow-sm hover:shadow-md transition group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-blue-100 group-hover:bg-blue-600 transition-colors duration-300"></div>
+                    <div class="text-5xl font-black text-gray-100 mb-4 group-hover:text-blue-50 transition-colors duration-300">04</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 border-l-2 border-blue-600 pl-3">Inspeção e Entrega Final</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Realizamos uma avaliação minuciosa de toda a instalação para validar a conformidade com o projeto executivo, assegurando a excelência do acabamento, a segurança estrutural e a liberação da obra.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: NOSSOS DIFERENCIAIS -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Vantagens Competitivas</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Por que escolher a Monta-Tec?</h2>
+                <div class="w-12 h-0.5 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Diferencial 1 -->
+                <div class="p-6 md:p-8 bg-gray-50 border border-gray-100 rounded-sm hover:shadow-md transition text-center md:text-left">
+                    <div class="text-blue-600 mb-4 flex justify-center md:justify-start">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Qualidade em 1º Lugar</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Não importa o tamanho da sua necessidade. Atendemos todos os clientes com o mesmo rigor. Trabalhamos exclusivamente com materiais e sistemas de fixação de alta performance para garantir acabamentos impecáveis.
+                    </p>
+                </div>
+                <!-- Diferencial 2 -->
+                <div class="p-6 md:p-8 bg-gray-50 border border-gray-100 rounded-sm hover:shadow-md transition text-center md:text-left">
+                    <div class="text-blue-600 mb-4 flex justify-center md:justify-start">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Atendimento de Especialistas</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Interlocução direta de engenharia para engenharia. Nossa equipe entende a complexidade técnica das paginações, conseguindo oferecer soluções seguras e resolver gargalos antes da montagem.
+                    </p>
+                </div>
+                <!-- Diferencial 3 -->
+                <div class="p-6 md:p-8 bg-gray-50 border border-gray-100 rounded-sm hover:shadow-md transition text-center md:text-left">
+                    <div class="text-blue-600 mb-4 flex justify-center md:justify-start">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Eficiente para Qualquer Ramo</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed">
+                        Seja qual for seu ramo de atividade — sedes corporativas, centros comerciais ou complexos industriais —, nós temos as melhores equipes de execução para sua demanda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORNECEDORES PARCEIROS -->
+    <section id="parceiros" class="py-16 bg-gray-50 border-t border-gray-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-10">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Fornecedores Parceiros</h3>
+                <div class="w-12 h-0.5 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="hidden lg:grid lg:grid-cols-7 gap-4">
+                <a href="https://alucomaxx.com.br/" target="_blank" class="bg-white border border-gray-200 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 transition-all duration-300"><img src="../imagens/parceiros/alucomaxx.png" alt="ACM" class="h-10 w-auto max-w-full object-contain"></a>
+                <a href="https://www.bold.net/BoldB2b/" target="_blank" class="bg-white border border-gray-200 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 transition-all duration-300"><img src="../imagens/parceiros/bold.svg" alt="Bold" class="h-10 w-auto max-w-full object-contain"></a>
+                <a href="https://projetoaluminio.com.br/" target="_blank" class="bg-white border border-gray-200 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 transition-all duration-300"><img src="../imagens/parceiros/projetoaluminio.png" alt="Projeto Alumínio" class="h-16 w-auto max-w-full object-contain"></a>
+                <a href="https://arkosbrasil.com.br/" target="_blank" class="bg-white border border-gray-200 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 transition-all duration-300"><img src="../imagens/parceiros/arkos.png" alt="Arkos" class="h-16 w-auto max-w-full object-contain"></a>
+                <a href="https://daybrasil.com.br/" target="_blank" class="bg-white border border-gray-200 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 transition-all duration-300"><img src="../imagens/parceiros/day-brasil.smg.svg" alt="Day Brasil" class="h-10 w-auto max-w-full object-contain"></a>
+                <a href="https://www.hunterdouglas.com.br/" target="_blank" class="bg-white border border-gray-200 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 transition-all duration-300"><img src="../imagens/parceiros/hunterdouglas.png" alt="Hunter Douglas" class="h-16 w-auto max-w-full object-contain"></a>
+                <a href="https://sulmetais.com.br/" target="_blank" class="bg-white border border-gray-200 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 transition-all duration-300"><img src="../imagens/parceiros/sulmetais.smg.svg" alt="Sulmetais" class="h-10 w-auto max-w-full object-contain"></a>
+            </div>
+
+            <div class="lg:hidden relative w-full overflow-hidden py-2">
+                <div class="marquee-track gap-4">
+                    <a href="https://alucomaxx.com.br/" target="_blank" class="w-36 h-24 bg-white border border-gray-200 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/alucomaxx.png" alt="Alucomaxx" class="h-8 object-contain"></a>
+                    <a href="https://www.bold.net/BoldB2b/" target="_blank" class="w-36 h-24 bg-white border border-gray-200 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/bold.svg" alt="Bold" class="h-8 object-contain"></a>
+                    <a href="https://projetoaluminio.com.br/" target="_blank" class="w-36 h-24 bg-white border border-gray-200 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/projetoaluminio.png" alt="Projeto Alumínio" class="h-12 object-contain"></a>
+                    <a href="https://arkosbrasil.com.br/" target="_blank" class="w-36 h-24 bg-white border border-gray-200 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/arkos.png" alt="Arkos" class="h-12 object-contain"></a>
+                    <a href="https://daybrasil.com.br/" target="_blank" class="w-36 h-24 bg-white border border-gray-200 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/day-brasil.smg.svg" alt="Day Brasil" class="h-8 object-contain"></a>
+                    <a href="https://www.hunterdouglas.com.br/" target="_blank" class="w-36 h-24 bg-white border border-gray-200 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/hunterdouglas.png" alt="Hunter Douglas" class="h-12 object-contain"></a>
+                    <a href="https://sulmetais.com.br/" target="_blank" class="w-36 h-24 bg-white border border-gray-200 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/sulmetais.smg.svg" alt="Sulmetais" class="h-8 object-contain"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-xs md:text-sm text-center md:text-left border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+                <img src="../imagens/logo fundo branco.png" alt="logo fundo branco" class="h-10 w-auto mx-auto md:mx-0 mb-3">
+                <p class="leading-relaxed">Especialistas em montagens técnicas de alto padrão.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Contato</h4>
+                <div class="space-y-1 text-xs">
+                    <p class="text-gray-300">(11) 94747–7099 — Eng. Fernando</p>
+                    <p class="text-gray-300">(11) 99344–7599 — Paulo Cézar</p>
+                    <p class="text-gray-300">pc@montateceng.com.br</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Sede Administrativa</h4>
+                <p class="leading-relaxed text-gray-300 text-xs">Av. Brigadeiro Faria Lima, 1616 / 1⁰ andar sala 105/106 - Jardim Paulistano, São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-[10px] border-t border-gray-800 pt-4 text-gray-500">
+            &copy; 2026 Monta-Tec Engenharia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- MENU MOBILE LATERAL (DRAWER) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-gray-950/40 backdrop-blur-sm transition-opacity duration-300">
+        <div id="mobile-menu-panel" class="bg-white w-4/5 max-w-sm h-full ml-auto p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
+                    <img src="../imagens/logo.png" alt="Monta-Tec" class="h-10 w-auto">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 focus:outline-none p-2 rounded-sm hover:bg-gray-50 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="flex flex-col space-y-2 text-base font-semibold text-gray-700 mt-4">
+                    <a href="index.html" class="mobile-link hover:text-blue-600 transition py-2.5 px-3 rounded-sm block">INÍCIO</a>
+                    <a href="servicos.html" class="mobile-link text-blue-600 bg-blue-50/50 transition py-2.5 px-3 rounded-sm block">SERVIÇOS</a>
+                    <a href="portfolio.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">PORTFÓLIO</a>
+                    <a href="empresa.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">EMPRESA</a>
+                    <a href="contato.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">CONTATO</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script>
+        const header = document.getElementById('main-header');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Lógica do Header Inteligente
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) {
+                header.classList.remove('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+                header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.add('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+            }
+        });
+
+        // Funções do Menu Drawer Mobile
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => { mobileMenuPanel.classList.remove('translate-x-full'); }, 10);
+        }
+        function closeMenu() {
+            mobileMenuPanel.classList.add('translate-x-full');
+            setTimeout(() => { mobileMenu.classList.add('hidden'); }, 300);
+        }
+        menuBtn.addEventListener('click', (e) => { e.stopPropagation(); openMenu(); });
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => { if (!mobileMenuPanel.contains(e.target)) { closeMenu(); } });
+        mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+
+        // Lógica do Seletor Dinâmico Superior (Tabs de Produtos) e Scroll Suave Inteligente
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Reseta todos os botões
+                tabBtns.forEach(b => { 
+                    b.classList.remove('bg-blue-600', 'text-white', 'shadow-sm'); 
+                    b.classList.add('border', 'border-gray-200', 'text-gray-500', 'hover:bg-gray-50', 'hover:text-gray-900'); 
+                });
+                // Ativa o botão clicado
+                btn.classList.remove('border', 'border-gray-200', 'text-gray-500', 'hover:bg-gray-50', 'hover:text-gray-900');
+                btn.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+                
+                // Esconde todo o conteúdo
+                tabPanes.forEach(pane => { pane.classList.add('hidden'); });
+                
+                // Mostra o conteúdo alvo
+                const targetId = btn.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetId);
+                targetPanel.classList.remove('hidden');
+                
+                // --- LÓGICA DE SCROLL SUAVE (Funciona no Mobile e no Desktop) ---
+                setTimeout(() => {
+                    const headerHeight = document.getElementById('main-header').offsetHeight;
+                    const stickyMenuHeight = document.getElementById('sticky-menu').offsetHeight;
+                    const totalOffset = headerHeight + stickyMenuHeight + 20; // 20px de respiro
+                    
+                    const elementPosition = targetPanel.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - totalOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            });
+        });
+
+        // Captura o hash do link vindo de outras páginas
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetBtn = document.querySelector(`[data-target="${hash}"]`);
+                if (targetBtn) {
+                    setTimeout(() => targetBtn.click(), 100);
+                }
+            }
+        });
+
+        // Carrossel Automático (Com correção para Scroll/Toque no Mobile)
+        const carousels = document.querySelectorAll('.carousel-container');
+        carousels.forEach(carousel => {
+            let slideTimer;
+            function startSlide() {
+                clearInterval(slideTimer);
+                slideTimer = setInterval(() => {
+                    const slideWidth = carousel.clientWidth;
+                    if (slideWidth === 0) return; // Evita bugar se a aba estiver oculta
+                    
+                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                    if (carousel.scrollLeft >= maxScroll - 10) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: slideWidth, behavior: 'smooth' });
+                    }
+                }, 5000); 
+            }
+            startSlide();
+            
+            // Pausa no Hover (Desktop)
+            carousel.addEventListener('mouseenter', () => clearInterval(slideTimer));
+            carousel.addEventListener('mouseleave', startSlide);
+            
+            // Pausa no Toque (Mobile)
+            carousel.addEventListener('touchstart', () => clearInterval(slideTimer), {passive: true});
+            carousel.addEventListener('touchend', startSlide, {passive: true});
+            carousel.addEventListener('touchcancel', startSlide, {passive: true}); // Corrige o bug do scroll
+        });
+    </script>
+</body>
+</html>

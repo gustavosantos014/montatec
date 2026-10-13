@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monta-Tec Engenharia | Alto Padrão em Soluções Arquitetônicas</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../imagens/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        .hover-bounce:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 relative pt-16 md:pt-20">
+
+    <!-- CABEÇALHO / MENU COMPACTO UNIFICADO -->
+    <header id="main-header" class="bg-gradient-to-b from-white/90 via-white/50 to-transparent fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-3.5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../imagens/logo.png" alt="Monta-Tec Engenharia" class="h-12 md:h-16 w-auto">
+            </a>
+            
+            <nav id="desktop-nav" class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-800 transition-colors duration-300">
+                <a href="index.html" class="text-blue-600 transition">INÍCIO</a>
+                <a href="servicos.html" class="hover:text-blue-600 transition">SERVIÇOS</a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition">PORTFÓLIO</a>
+                <a href="empresa.html" class="hover:text-blue-600 transition">EMPRESA</a>
+                <a href="contato.html" class="hover:text-blue-600 transition">CONTATO</a>
+            </nav>
+
+            <button id="menu-btn" class="lg:hidden text-gray-800 focus:outline-none p-2 transition-colors duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO BANNER (Capa Principal) -->
+    <section class="relative min-h-[70vh] flex items-center justify-center text-center px-4 md:px-8 bg-black -mt-16 md:-mt-20 py-20 lg:py-28" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        <div class="w-full max-w-5xl mx-auto">
+            <span class="text-xs md:text-sm font-bold text-blue-500 uppercase tracking-widest block mb-4">Engenharia de Alto Padrão</span>
+            <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                Projetos Complexos elevando o <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">Nível Estético e Funcional</span> da sua Obra
+            </h1>
+            <p class="text-sm md:text-xl text-gray-200 mb-10 font-light max-w-3xl mx-auto leading-relaxed">
+                Brises, forros e revestimentos de alta performance para projetos corporativos exigentes. Aliamos sofisticação estética incomparável com a segurança técnica que sua obra necessita.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#solucoes-preview" class="inline-block bg-blue-600 text-white px-8 py-4 text-xs md:text-sm font-bold tracking-wider uppercase hover:bg-blue-700 transition shadow-lg rounded-sm">
+                    Conhecer Soluções
+                </a>
+                <a href="contato.html" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 text-xs md:text-sm font-bold tracking-wider uppercase hover:bg-white hover:text-gray-900 transition rounded-sm">
+                    Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRODUÇÃO DA EMPRESA -->
+    <section class="py-16 md:py-24 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600 tracking-widest block mb-2 uppercase">História e Compromisso</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+                            "Não há disputa: nosso foco é ser referência, não concorrência."
+                        </h2>
+                        <div class="w-12 h-1 bg-blue-600 mt-4"></div>
+                    </div>
+                    <div class="text-gray-600 text-sm md:text-base space-y-4 leading-relaxed font-light">
+                        <p>
+                            A <span class="font-semibold text-gray-900">Monta-Tec Engenharia</span> é especializada na comercialização e instalação de soluções arquitetônicas, como brises, revestimentos, forros, esquadrias e policarbonatos, atendendo projetos corporativos, comerciais e industriais.
+                        </p>
+                        <p>
+                            Unimos planejamento, conhecimento técnico e excelência na execução para entregar soluções seguras, duráveis e de alto padrão. Trabalhamos em parceria com construtoras, escritórios de arquitetura e gerenciadoras de obras, garantindo qualidade, precisão e cumprimento rigoroso dos prazos em cada projeto.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <a href="empresa.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold tracking-wider uppercase px-6 py-3.5 rounded-sm shadow-sm transition">
+                            Conheça Nossa História →
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <img src="\imagens\capa\inicio (4).jpeg" class="w-full h-64 md:h-96 object-cover rounded-sm shadow-md" alt="Montagem e Engenharia de Execução Monta-Tec">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVIEW DE SOLUÇÕES (Todas em 1 linha) -->
+    <section id="solucoes-preview" class="py-12 md:py-16 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            
+            <div class="text-center mb-10 max-w-4xl mx-auto">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Linhas de Soluções Corporativas</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-light text-gray-900 tracking-tight leading-tight">
+                    Evolução Estrutural com Sofisticação Incomparável. <br class="hidden sm:inline"> Conheça as soluções <span class="font-bold">Monta-Tec</span>
+                </h2>
+                <div class="w-12 h-0.5 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Ajustado para lg:grid-cols-6 (1 linha com os 6 cards em telas grandes) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+                
+                <!-- Card 1: Brises -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                       <img src="../imagens/servicos/brise/brise m (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 1">
+                    </div>
+                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Sistemas de Brises</h3>
+                            <p class="text-gray-500 text-[11px] font-light mt-1">Controle de incidência solar, redução de ganho térmico e ventilação natural para fachadas.</p>
+                        </div>
+                        <a href="servicos.html#brises" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                            Ver Detalhes &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Revestimentos -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                        <img src="\imagens\capa\inicio (6).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Revestimentos Metálicos e ACM">
+                    </div>
+                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Revestimentos</h3>
+                            <p class="text-gray-500 text-[11px] font-light mt-1">Painéis em ACM e chapas metálicas que garantem planicidade, leveza e durabilidade.</p>
+                        </div>
+                        <a href="servicos.html#revestimentos" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                            Ver Detalhes &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Forros -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                        <img src="\imagens\capa\inicio (7).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Forros Metálicos e WPC">
+                    </div>
+                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Forros</h3>
+                            <p class="text-gray-500 text-[11px] font-light mt-1">Sistemas metálicos e Arkos (WPC) com nivelamento a laser e acesso rápido ao plenum.</p>
+                        </div>
+                        <a href="servicos.html#forros" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                            Ver Detalhes &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Esquadrias -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                        <img src="\imagens\capa\inicio (1).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Esquadrias">
+                    </div>
+                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Esquadrias</h3>
+                            <p class="text-gray-500 text-[11px] font-light mt-1">Perfis de alta performance que integram segurança e excelente desempenho acústico.</p>
+                        </div>
+                        <a href="servicos.html#esquadrias" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                            Ver Detalhes &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Policarbonatos -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                        <img src="\imagens\capa\inicio (3).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Policarbonatos">
+                    </div>
+                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Policarbonatos</h3>
+                            <p class="text-gray-500 text-[11px] font-light mt-1">Soluções translúcidas extremamente resistentes a impactos com proteção anti-UV.</p>
+                        </div>
+                        <a href="servicos.html#policarbonatos" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                            Ver Detalhes &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Decks -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                        <img src="../imagens/servicos/deck/deck (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 3">
+                    </div>
+                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Decks</h3>
+                            <p class="text-gray-500 text-[11px] font-light mt-1">Sistemas em WPC para áreas externas. Alta resistência e estética de madeira natural.</p>
+                        </div>
+                        <a href="servicos.html#decks" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                            Ver Detalhes &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="servicos.html" class="inline-block bg-transparent border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-bold text-xs tracking-wider uppercase px-8 py-3.5 transition rounded-sm shadow-sm">
+                    Ver Todos os Nossos Serviços
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PREVIEW DO PORTFÓLIO -->
+    <section id="portfolio-preview" class="py-16 bg-gray-100 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Projetos de Destaque</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+                <div class="bg-white rounded-sm shadow-md overflow-hidden group">
+                    <div class="h-56 md:h-64 overflow-hidden relative">
+                        <img src="../imagens/Portifolho/obras/met/met (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 1">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2">Monotrilho Linha 17-Ouro</h3>
+                        <p class="text-gray-600 text-xs md:text-sm">Execução e montagem de revestimentos metálicos em aço galvanizado, incluindo telas nas áreas internas e externas, com foco em precisão, durabilidade e qualidade de acabamento para uma importante obra de mobilidade urbana de São Paulo.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-sm shadow-md overflow-hidden group">
+                    <div class="h-56 md:h-64 overflow-hidden relative">
+                        <img src="../imagens/Portifolho/obras/ip/ip (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2">Instituto Pecege</h3>
+                        <p class="text-gray-600 text-xs md:text-sm">Execução de revestimentos em WPC e coberturas em policarbonato, combinando acabamento amadeirado, iluminação natural e desempenho para valorizar a arquitetura contemporânea do projeto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="portfolio.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3.5 md:px-8 md:py-4 uppercase tracking-wider text-xs md:text-sm transition rounded-sm shadow-md">
+                    Ver Portfólio Completo →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER DISTRIBUIÇÃO E CONTATO -->
+    <section class="py-10 md:py-14 bg-gray-900 text-white text-center px-4">
+        <div class="max-w-2xl mx-auto">
+            <span class="text-xs font-bold text-blue-500 uppercase tracking-widest block mb-2">Distribuição Estratégica</span>
+            <h2 class="text-xl md:text-3xl font-bold mb-4">Conexão Direta com os Fabricantes</h2>
+            <p class="text-xs md:text-sm text-gray-400 font-light mb-8 leading-relaxed">
+                Trazemos o que há de melhor no mercado global diretamente das principais indústrias parceiras para o seu canteiro de obras. Sem intermediários complexos, cuidamos de toda a negociação e logística. É assim que garantimos materiais com certificação rigorosa, engenharia fina de montagem e o custo-benefício real que viabiliza o seu projeto corporativo.
+            </p>
+            <a href="contato.html" class="inline-block bg-blue-600 text-white px-6 py-3 text-xs font-bold tracking-wider uppercase hover:bg-blue-700 transition shadow-md rounded-sm">
+                Fale com Nossos Especialistas
+            </a>
+        </div>
+    </section>
+
+    <!-- FORNECEDORES PARCEIROS -->
+    <section id="parceiros" class="py-16 bg-white border-b border-gray-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-10">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Fornecedores Parceiros</h3>
+                <div class="w-12 h-0.5 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="hidden lg:grid lg:grid-cols-7 gap-4">
+                <a href="https://alucomaxx.com.br/" target="_blank" class="bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 lg:hover:bg-white transition-all duration-300">
+                    <img src="../imagens/parceiros/alucomaxx.png" alt="ACM" class="h-10 w-auto max-w-full object-contain">
+                </a>
+                <a href="https://www.bold.net/BoldB2b/" target="_blank" class="bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 lg:hover:bg-white transition-all duration-300">
+                    <img src="../imagens/parceiros/bold.svg" alt="Bold" class="h-10 w-auto max-w-full object-contain">
+                </a>
+                <a href="https://projetoaluminio.com.br/" target="_blank" class="bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 lg:hover:bg-white transition-all duration-300">
+                    <img src="../imagens/parceiros/projetoaluminio.png" alt="Projeto Alumínio" class="h-16 w-auto max-w-full object-contain">
+                </a>
+                <a href="https://arkosbrasil.com.br/" target="_blank" class="bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 lg:hover:bg-white transition-all duration-300">
+                    <img src="../imagens/parceiros/arkos.png" alt="Arkos" class="h-16 w-auto max-w-full object-contain">
+                </a>
+                <a href="https://daybrasil.com.br/" target="_blank" class="bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 lg:hover:bg-white transition-all duration-300">
+                    <img src="../imagens/parceiros/day-brasil.smg.svg" alt="Day Brasil" class="h-10 w-auto max-w-full object-contain">
+                </a>
+                <a href="https://www.hunterdouglas.com.br/" target="_blank" class="bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 lg:hover:bg-white transition-all duration-300">
+                    <img src="../imagens/parceiros/hunterdouglas.png" alt="Hunter Douglas" class="h-16 w-auto max-w-full object-contain">
+                </a>
+                <a href="https://sulmetais.com.br/" target="_blank" class="bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-4 h-28 lg:hover:-translate-y-1.5 lg:hover:shadow-lg lg:hover:border-blue-600 lg:hover:bg-white transition-all duration-300">
+                    <img src="../imagens/parceiros/sulmetais.smg.svg" alt="Sulmetais" class="h-10 w-auto max-w-full object-contain">
+                </a>
+            </div>
+
+            <div class="lg:hidden relative w-full overflow-hidden py-2">
+                <div class="marquee-track gap-4">
+                    <a href="https://alucomaxx.com.br/" target="_blank" class="w-36 h-24 bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/alucomaxx.png" alt="Alucomaxx" class="h-8 object-contain"></a>
+                    <a href="https://www.bold.net/BoldB2b/" target="_blank" class="w-36 h-24 bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/bold.svg" alt="Bold" class="h-8 object-contain"></a>
+                    <a href="https://projetoaluminio.com.br/" target="_blank" class="w-36 h-24 bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/projetoaluminio.png" alt="Projeto Alumínio" class="h-12 object-contain"></a>
+                    <a href="https://arkosbrasil.com.br/" target="_blank" class="w-36 h-24 bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/arkos.png" alt="Arkos" class="h-12 object-contain"></a>
+                    <a href="https://daybrasil.com.br/" target="_blank" class="w-36 h-24 bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/day-brasil.smg.svg" alt="Day Brasil" class="h-8 object-contain"></a>
+                    <a href="https://www.hunterdouglas.com.br/" target="_blank" class="w-36 h-24 bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/hunterdouglas.png" alt="Hunter Douglas" class="h-12 object-contain"></a>
+                    <a href="https://sulmetais.com.br/" target="_blank" class="w-36 h-24 bg-gray-50 border border-gray-100 rounded-sm flex items-center justify-center p-3 flex-shrink-0"><img src="../imagens/parceiros/sulmetais.smg.svg" alt="Sulmetais" class="h-8 object-contain"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-xs md:text-sm text-center md:text-left border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+                <img src="../imagens/logo fundo branco.png" alt="logo fundo branco" class="h-10 w-auto mx-auto md:mx-0 mb-3">
+                <p class="leading-relaxed">Especialistas em montagens técnicas de alto padrão.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Contato</h4>
+                <div class="space-y-2 flex flex-col items-center md:items-start text-sm">
+                    <p class="text-gray-300">(11) 94747–7099 — Eng. Fernando</p>
+                    <p class="text-gray-300">(11) 99344–7599 — Paulo Cézar</p>
+                    <p class="text-gray-300">pc@montateceng.com.br</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider">Sede Administrativa</h4>
+                <p class="leading-relaxed text-gray-300 text-xs">Av. Brigadeiro Faria Lima, 1616 / 1⁰ andar sala 105/106 - Jardim Paulistano, São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-[10px] border-t border-gray-800 pt-4 text-gray-500">
+            &copy; 2026 Monta-Tec Engenharia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- MENU MOBILE LATERAL (DRAWER) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-gray-950/40 backdrop-blur-sm transition-opacity duration-300">
+        <div id="mobile-menu-panel" class="bg-white w-4/5 max-w-sm h-full ml-auto p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
+                    <img src="../imagens/logo.png" alt="Monta-Tec" class="h-10 w-auto">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 focus:outline-none p-2 rounded-sm hover:bg-gray-50 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="flex flex-col space-y-2 text-base font-semibold text-gray-700 mt-4">
+                    <a href="index.html" class="mobile-link text-blue-600 transition py-2.5 px-3 rounded-sm bg-blue-50/50 block">INÍCIO</a>
+                    <a href="servicos.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">SERVIÇOS</a>
+                    <a href="portfolio.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">PORTFÓLIO</a>
+                    <a href="empresa.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">EMPRESA</a>
+                    <a href="contato.html" class="mobile-link hover:text-blue-600 hover:bg-gray-50 transition py-2.5 px-3 rounded-sm block">CONTATO</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const header = document.getElementById('main-header');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Header Inteligente
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 50) {
+                header.classList.remove('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+                header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.add('bg-gradient-to-b', 'from-white/90', 'via-white/50', 'to-transparent');
+            }
+        });
+
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => { mobileMenuPanel.classList.remove('translate-x-full'); }, 10);
+        }
+        function closeMenu() {
+            mobileMenuPanel.classList.add('translate-x-full');
+            setTimeout(() => { mobileMenu.classList.add('hidden'); }, 300);
+        }
+        menuBtn.addEventListener('click', (e) => { e.stopPropagation(); openMenu(); });
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => { if (!mobileMenuPanel.contains(e.target)) { closeMenu(); } });
+        mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+    </script>
+</body>
+</html>
