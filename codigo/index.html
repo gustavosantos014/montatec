@@ -53,7 +53,7 @@
     <header id="main-header" class="bg-gradient-to-b from-white/90 via-white/50 to-transparent fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
         <div class="max-w-7xl mx-auto px-4 md:px-6 py-3.5 flex justify-between items-center">
             <a href="index.html" class="flex items-center">
-                <img src="../imagens/logo.png" alt="Monta-Tec Engenharia" class="h-12 md:h-16 w-auto">
+                <img src="../imagens/logo.png" alt="Monta-Tec Engenharia" class="h-10 md:h-16 w-auto">
             </a>
             
             <nav id="desktop-nav" class="hidden lg:flex space-x-8 text-sm font-semibold text-gray-800 transition-colors duration-300">
@@ -76,7 +76,7 @@
     <section class="relative min-h-[70vh] flex items-center justify-center text-center px-4 md:px-8 bg-black -mt-16 md:-mt-20 py-20 lg:py-28" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
         <div class="w-full max-w-5xl mx-auto">
             <span class="text-xs md:text-sm font-bold text-blue-500 uppercase tracking-widest block mb-4">Engenharia de Alto Padrão</span>
-            <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
                 Projetos Complexos elevando o <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">Nível Estético e Funcional</span> da sua Obra
             </h1>
             <p class="text-sm md:text-xl text-gray-200 mb-10 font-light max-w-3xl mx-auto leading-relaxed">
@@ -114,7 +114,7 @@
                         </p>
                     </div>
                     <div class="pt-2">
-                        <a href="empresa.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold tracking-wider uppercase px-6 py-3.5 rounded-sm shadow-sm transition">
+                        <a href="empresa.html" class="inline-block w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold tracking-wider uppercase px-6 py-3.5 rounded-sm shadow-sm transition">
                             Conheça Nossa História →
                         </a>
                     </div>
@@ -126,7 +126,7 @@
         </div>
     </section>
 
-    <!-- PREVIEW DE SOLUÇÕES (Todas em 1 linha) -->
+    <!-- PREVIEW DE SOLUÇÕES (Ajustado para 2 em 2 no mobile) -->
     <section id="solucoes-preview" class="py-12 md:py-16 bg-gray-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             
@@ -138,100 +138,99 @@
                 <div class="w-12 h-0.5 bg-blue-600 mx-auto mt-4"></div>
             </div>
 
-            <!-- Ajustado para lg:grid-cols-6 (1 linha com os 6 cards em telas grandes) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+            <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4">
                 
                 <!-- Card 1: Brises -->
-                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
-                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
-                       <img src="../imagens/servicos/brise/brise m (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 1">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-2 sm:p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-2 sm:mb-3">
+                        <img src="../imagens/servicos/brise/brise m (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Brise Amadeirado 1">
                     </div>
-                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1 sm:space-y-2 flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Sistemas de Brises</h3>
-                            <p class="text-gray-500 text-[11px] font-light mt-1">Controle de incidência solar, redução de ganho térmico e ventilação natural para fachadas.</p>
+                            <h3 class="text-xs sm:text-sm font-bold text-gray-900 tracking-tight leading-tight">Sistemas de Brises</h3>
+                            <p class="text-gray-500 text-[10px] sm:text-[11px] font-light mt-1 hidden sm:block">Controle de incidência solar, redução de ganho térmico e ventilação natural para fachadas.</p>
                         </div>
-                        <a href="servicos.html#brises" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                        <a href="servicos.html#brises" class="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-1 sm:pt-2">
                             Ver Detalhes &rarr;
                         </a>
                     </div>
                 </div>
 
                 <!-- Card 2: Revestimentos -->
-                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
-                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-2 sm:p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-2 sm:mb-3">
                         <img src="..\imagens\capa\inicio (6).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Revestimentos Metálicos e ACM">
                     </div>
-                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1 sm:space-y-2 flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Revestimentos</h3>
-                            <p class="text-gray-500 text-[11px] font-light mt-1">Painéis em ACM e chapas metálicas que garantem planicidade, leveza e durabilidade.</p>
+                            <h3 class="text-xs sm:text-sm font-bold text-gray-900 tracking-tight leading-tight">Revestimentos</h3>
+                            <p class="text-gray-500 text-[10px] sm:text-[11px] font-light mt-1 hidden sm:block">Painéis em ACM e chapas metálicas que garantem planicidade, leveza e durabilidade.</p>
                         </div>
-                        <a href="servicos.html#revestimentos" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                        <a href="servicos.html#revestimentos" class="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-1 sm:pt-2">
                             Ver Detalhes &rarr;
                         </a>
                     </div>
                 </div>
 
                 <!-- Card 3: Forros -->
-                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
-                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-2 sm:p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-2 sm:mb-3">
                         <img src="../imagens/capa/inicio (7).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Forros Metálicos e WPC">
                     </div>
-                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1 sm:space-y-2 flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Forros</h3>
-                            <p class="text-gray-500 text-[11px] font-light mt-1">Sistemas metálicos e Arkos (WPC) com nivelamento a laser e acesso rápido ao plenum.</p>
+                            <h3 class="text-xs sm:text-sm font-bold text-gray-900 tracking-tight leading-tight">Forros</h3>
+                            <p class="text-gray-500 text-[10px] sm:text-[11px] font-light mt-1 hidden sm:block">Sistemas metálicos e Arkos (WPC) com nivelamento a laser e acesso rápido ao plenum.</p>
                         </div>
-                        <a href="servicos.html#forros" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                        <a href="servicos.html#forros" class="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-1 sm:pt-2">
                             Ver Detalhes &rarr;
                         </a>
                     </div>
                 </div>
 
                 <!-- Card 4: Esquadrias -->
-                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
-                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-2 sm:p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-2 sm:mb-3">
                         <img src="..\imagens\capa\inicio (1).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Esquadrias">
                     </div>
-                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1 sm:space-y-2 flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Esquadrias</h3>
-                            <p class="text-gray-500 text-[11px] font-light mt-1">Perfis de alta performance que integram segurança e excelente desempenho acústico.</p>
+                            <h3 class="text-xs sm:text-sm font-bold text-gray-900 tracking-tight leading-tight">Esquadrias</h3>
+                            <p class="text-gray-500 text-[10px] sm:text-[11px] font-light mt-1 hidden sm:block">Perfis de alta performance que integram segurança e excelente desempenho acústico.</p>
                         </div>
-                        <a href="servicos.html#esquadrias" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                        <a href="servicos.html#esquadrias" class="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-1 sm:pt-2">
                             Ver Detalhes &rarr;
                         </a>
                     </div>
                 </div>
 
                 <!-- Card 5: Policarbonatos -->
-                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
-                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-2 sm:p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-2 sm:mb-3">
                         <img src="..\imagens\capa\inicio (3).jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Policarbonatos">
                     </div>
-                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1 sm:space-y-2 flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Policarbonatos</h3>
-                            <p class="text-gray-500 text-[11px] font-light mt-1">Soluções translúcidas extremamente resistentes a impactos com proteção anti-UV.</p>
+                            <h3 class="text-xs sm:text-sm font-bold text-gray-900 tracking-tight leading-tight">Policarbonatos</h3>
+                            <p class="text-gray-500 text-[10px] sm:text-[11px] font-light mt-1 hidden sm:block">Soluções translúcidas extremamente resistentes a impactos com proteção anti-UV.</p>
                         </div>
-                        <a href="servicos.html#policarbonatos" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                        <a href="servicos.html#policarbonatos" class="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-1 sm:pt-2">
                             Ver Detalhes &rarr;
                         </a>
                     </div>
                 </div>
 
                 <!-- Card 6: Decks -->
-                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-3">
-                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-3">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-blue-600/40 transition-all duration-300 shadow-sm flex flex-col justify-between p-2 sm:p-3">
+                    <div class="overflow-hidden rounded-sm aspect-[16/10] bg-gray-100 mb-2 sm:mb-3">
                         <img src="../imagens/servicos/deck/deck (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Deck 3">
                     </div>
-                    <div class="space-y-2 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1 sm:space-y-2 flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 class="text-sm font-bold text-gray-900 tracking-tight">Decks</h3>
-                            <p class="text-gray-500 text-[11px] font-light mt-1">Sistemas em WPC para áreas externas. Alta resistência e estética de madeira natural.</p>
+                            <h3 class="text-xs sm:text-sm font-bold text-gray-900 tracking-tight leading-tight">Decks</h3>
+                            <p class="text-gray-500 text-[10px] sm:text-[11px] font-light mt-1 hidden sm:block">Sistemas em WPC para áreas externas. Alta resistência e estética de madeira natural.</p>
                         </div>
-                        <a href="servicos.html#decks" class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-2">
+                        <a href="servicos.html#decks" class="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-bold text-blue-600 uppercase tracking-wider hover:text-blue-700 transition pt-1 sm:pt-2">
                             Ver Detalhes &rarr;
                         </a>
                     </div>
@@ -240,7 +239,7 @@
             </div>
             
             <div class="text-center mt-10">
-                <a href="servicos.html" class="inline-block bg-transparent border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-bold text-xs tracking-wider uppercase px-8 py-3.5 transition rounded-sm shadow-sm">
+                <a href="servicos.html" class="inline-block w-full sm:w-auto bg-transparent border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-bold text-xs tracking-wider uppercase px-8 py-3.5 transition rounded-sm shadow-sm">
                     Ver Todos os Nossos Serviços
                 </a>
             </div>
@@ -248,35 +247,36 @@
         </div>
     </section>
 
-    <!-- PREVIEW DO PORTFÓLIO -->
+    <!-- PREVIEW DO PORTFÓLIO (Ajustado para 2 colunas no mobile) -->
     <section id="portfolio-preview" class="py-16 bg-gray-100 border-t border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="text-center mb-12">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Projetos de Destaque</h2>
                 <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+            <!-- Modificado grid-cols-1 para grid-cols-2 -->
+            <div class="grid grid-cols-2 gap-3 md:gap-8 mb-12">
                 <div class="bg-white rounded-sm shadow-md overflow-hidden group">
-                    <div class="h-56 md:h-64 overflow-hidden relative">
+                    <div class="h-32 sm:h-56 md:h-64 overflow-hidden relative">
                         <img src="../imagens/Portifolho/obras/met/met (1).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Obras do Metrô 1">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2">Monotrilho Linha 17-Ouro</h3>
-                        <p class="text-gray-600 text-xs md:text-sm">Execução e montagem de revestimentos metálicos em aço galvanizado, incluindo telas nas áreas internas e externas, com foco em precisão, durabilidade e qualidade de acabamento para uma importante obra de mobilidade urbana de São Paulo.</p>
+                    <div class="p-3 sm:p-6">
+                        <h3 class="text-xs sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 leading-tight">Monotrilho Linha 17-Ouro</h3>
+                        <p class="text-gray-600 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none leading-relaxed">Execução e montagem de revestimentos metálicos em aço galvanizado, incluindo telas nas áreas internas e externas, com foco em precisão, durabilidade e qualidade de acabamento para uma importante obra de mobilidade urbana de São Paulo.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-sm shadow-md overflow-hidden group">
-                    <div class="h-56 md:h-64 overflow-hidden relative">
+                    <div class="h-32 sm:h-56 md:h-64 overflow-hidden relative">
                         <img src="../imagens/Portifolho/obras/ip/ip (4).jpg" class="shrink-0 w-full h-full object-cover snap-center" alt="Instituto Pecege 4">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2">Instituto Pecege</h3>
-                        <p class="text-gray-600 text-xs md:text-sm">Execução de revestimentos em WPC e coberturas em policarbonato, combinando acabamento amadeirado, iluminação natural e desempenho para valorizar a arquitetura contemporânea do projeto.</p>
+                    <div class="p-3 sm:p-6">
+                        <h3 class="text-xs sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 leading-tight">Instituto Pecege</h3>
+                        <p class="text-gray-600 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none leading-relaxed">Execução de revestimentos em WPC e coberturas em policarbonato, combinando acabamento amadeirado, iluminação natural e desempenho para valorizar a arquitetura contemporânea do projeto.</p>
                     </div>
                 </div>
             </div>
             <div class="text-center">
-                <a href="portfolio.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3.5 md:px-8 md:py-4 uppercase tracking-wider text-xs md:text-sm transition rounded-sm shadow-md">
+                <a href="portfolio.html" class="inline-block w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3.5 md:px-8 md:py-4 uppercase tracking-wider text-xs md:text-sm transition rounded-sm shadow-md">
                     Ver Portfólio Completo →
                 </a>
             </div>
@@ -291,7 +291,7 @@
             <p class="text-xs md:text-sm text-gray-400 font-light mb-8 leading-relaxed">
                 Trazemos o que há de melhor no mercado global diretamente das principais indústrias parceiras para o seu canteiro de obras. Sem intermediários complexos, cuidamos de toda a negociação e logística. É assim que garantimos materiais com certificação rigorosa, engenharia fina de montagem e o custo-benefício real que viabiliza o seu projeto corporativo.
             </p>
-            <a href="contato.html" class="inline-block bg-blue-600 text-white px-6 py-3 text-xs font-bold tracking-wider uppercase hover:bg-blue-700 transition shadow-md rounded-sm">
+            <a href="contato.html" class="inline-block w-full sm:w-auto bg-blue-600 text-white px-6 py-3 text-xs font-bold tracking-wider uppercase hover:bg-blue-700 transition shadow-md rounded-sm">
                 Fale com Nossos Especialistas
             </a>
         </div>
@@ -343,7 +343,7 @@
         </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <!-- RODAPÉ REVERTIDO PARA VERSÃO ORIGINAL -->
     <footer class="bg-gray-900 text-gray-400 py-6 text-xs md:text-sm text-center md:text-left border-t border-gray-800 mt-auto">
         <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
             <div>
@@ -373,7 +373,7 @@
         <div id="mobile-menu-panel" class="bg-white w-4/5 max-w-sm h-full ml-auto p-6 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
             <div>
                 <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
-                    <img src="../imagens/logo.png" alt="Monta-Tec" class="h-10 w-auto">
+                    <img src="../imagens/logo.png" alt="Monta-Tec" class="h-8 w-auto">
                     <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 focus:outline-none p-2 rounded-sm hover:bg-gray-50 transition">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
